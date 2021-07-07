@@ -8,12 +8,14 @@ html {
 
 body {
     display: flex;
+    height: 100vh;
     flex-direction: column;
     font-family: 'Sen', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #8AC1C5;
 }
+
 
 /******************/
 /* Navigation bar */
@@ -53,28 +55,99 @@ body {
     filter:contrast(300%);
 }
 
-/****************/
-/* Main sections */
-/****************/
 
-.section-container {
-    min-height: 42.4rem;
-    max-height: 100vh;
-    width: 100vw;
+/*****************/
+/* Main sections */
+/*****************/
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
     background: #FFF;
 
+}
+
+/* TODO: Large, panoramic, verdant black-and-white ink drawing */
+.landscape-drawing {
+
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-grid {
+    display: grid;
+    width: 100vw;
+    height: 600px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* TODO: Make IDs for each project */
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(50, 92, 109, 0.7)
+}
+
+/* About section contains a main grid of two (2), which itself contains
+ * a sub-grid of four (4) in the left container, and an 'about-me' section on the right */
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-grid {
+    display: grid;
+    width: 100vw;
+    height: 600px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.portrait-sub-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 10px;
+}
+
+.portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(50, 92, 109, 0.7);
+    width: 75%;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    line-height: 1.8;
 }
 
 /**********/
 /* Footer */
 /**********/
 
-footer {
-
-}
-
 .footer-container {
-    height: 10vh;
+    height: 14vh;
     display: flex;
     position: relative;
     justify-content: center;
@@ -84,9 +157,11 @@ footer {
 }
 
 .footer-container a { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 0px 10px 0px;
 }
-
 
 .footer-container a img {
     width: 40%;
