@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box; 
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Sen', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #8AC1C5;
+}
+
+/******************/
+/* Navigation bar */
+/******************/
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+/* Left side of navigation bar */
+.logo img {
+    width: 80px;
+    height:80px;
+}
+
+/* Right side of navigation bar */
+.nav-list ul {
+    display: flex;
+    list-style: none;
+}   
+
+.nav-list li {
+    text-decoration: none;
+}
+
+.nav-list li a {
+    padding: 1rem;
+    text-decoration: none;
+    color: #324B4D;
+}
+
+.nav-list li a:hover {
+    color: #fff;
+    filter:contrast(300%);
+}
+
+/****************/
+/* Main sections */
+/****************/
+
+.section-container {
+    min-height: 42.4rem;
+    max-height: 100vh;
+    width: 100vw;
+    background: #FFF;
+
+}
+
+/**********/
+/* Footer */
+/**********/
+
+footer {
+
+}
+
+.footer-container {
+    height: 10vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; 
+    background: #8AC1C5;
+}
+
+.footer-container a { 
+    padding: 10px 0px 10px 0px;
+}
+
+
+.footer-container a img {
+    width: 40%;
+}
+
+/* Defaults for the LinkedIn/GitHub logos */
+.footer-container a img[src="img/linkedin_logo.png"] {
+    background: rgba(255, 255, 255, .7);
+    border-radius: 3px;
+}
+
+.footer-container a img[src="img/github_logo.png"] {
+    background: rgba(255, 255, 255, .7);
+    border-radius: 1rem;
+}
+
+/* Hovers for the LinkedIn/GitHub logos */
+.footer-container a img[src="img/linkedin_logo.png"]:hover {
+    background: #FFF;
+    filter: brightness(120%);
+    border-radius: 3px;
+}
+
+.footer-container a img[src="img/github_logo.png"]:hover {
+    background: #FFF;
+    filter: brightness(120%);
+    border-radius: 1rem;
+}
+
+.copyright-overlay {
+    color: #324B4D;
+    position: absolute;
+    font-size: .7rem;
+    right: 35px;
+}
