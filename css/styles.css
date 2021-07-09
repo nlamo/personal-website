@@ -191,6 +191,22 @@ section {
     line-height: 1.8;
 }
 
+/* Contact form stuff */
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container form {
+    font-size: 1.1rem;
+}
+
+.form-container button {
+    font-family: 'Sen', sans-serif;
+    font-size: 1.1rem;
+}
 /**********/
 /* Footer */
 /**********/

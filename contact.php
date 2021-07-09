@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,15 +25,34 @@
                 <ul>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" style="color:#FFF;">Contact</a></li>
+                    <li><a href="contact.php" style="color:#FFF;">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <section>
-        <div class="section-container">
+        <div class="form-container">
+            <form action="">
+                <p>Got a question, consideration, quandry, or curiosity? Feel free to reach out. </p><br>
+    
+                <label><u>Name</u></label><br><br>
+                <input type="text" name="name" size ="98">
+        
+                <br><br>
+        
+                <label><u>E-mail Address</u></label><br><br>
+                <input type="text" name="email" size ="98">
+        
+                <br><br>
+        
+                <label><u>Message</u></label><br><br>
+                <textarea name="message" id="job-descrption" cols="100" rows="14"></textarea>
 
+                <br><br>
+        
+                <button type="submit" name="submit-info" class="button">Submit</button>
+            </form>
         </div>
     </section>
 
