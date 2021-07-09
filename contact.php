@@ -1,33 +1,59 @@
 <?php
+
+    // Using post/redirect/get pattern, but there are still some kinks to work out
+
+    session_start();
+
     if (filter_has_var(INPUT_POST, 'submit')) 
     {
-        // for use in the HTML code
-        $inputsAreValid = false;
+        // NOTE: for use in the PHP statements *within* the HTML code, after redirects
+        $inputsHaveContent = false;
+        $emailIsValid = false;
 
-        if ( empty($_POST['email']) || empty($_POST['subject']) || empty($_POST['message']) )
+        $email = htmlspecialchars($_POST['email']);
+        $subject = htmlspecialchars($_POST['subject']);
+        $message = htmlspecialchars($_POST['message']);
+
+        $_SESSION['email'] = $email;
+        $_SESSION['subject'] = $subject;
+        $_SESSION['message'] = $message;
+
+        if ( empty($email) || empty($subject) || empty($message) )
         {
-            // OUTPUT: displays an alter box below submit button (see PHP in the form)
+            $_SESSION['inputsHaveContent'] = $inputsHaveContent;  
+            
+            // Redirect, then session variable will trigger alert-message UI element
+            header("Location: contact.php");
         }
-        else 
+        else
         {
-            $inputsAreValid = true;
+            $inputsHaveContent = true;
+            $_SESSION['inputsHaveContent'] = $inputsHaveContent;      
 
-            $senderemail = "Sent from " . htmlspecialchars($_POST['email']) . " :\n\n";
+            $senderemail = "Sent from " . $email . " :\n\n";
 
-            $to = "lamothe.dev@gmail.com";
-            $subject = htmlspecialchars($_POST['subject']);
-            $body = $senderemail . htmlspecialchars($_POST['message']);
-
-            // mail($to, $subject, $body)
-            // fourth additional parameter is vulnerable to injection attacks, apparently
-
-            // mail($to, $subject, $body);
-
-            // OUTPUT: displays a success box below submit button (see PHP in the form)
+            // If e-mail is invalid, will redirect without calling mail()
+            if ( (filter_var($email, FILTER_VALIDATE_EMAIL)) == false )
+            {
+                $_SESSION['emailIsValid'] = $emailIsValid;
+                header("Location: contact.php");
+            }
+            else 
+            {
+                $emailIsValid = true;
+                $_SESSION['emailIsValid'] = $emailIsValid;
+    
+                $to = "lamothe.dev@gmail.com";
+                $subject = htmlspecialchars($_POST['subject']);
+                $body = $senderemail . htmlspecialchars($_POST['message']);
+                mail($to, $subject, $body);
+    
+                // Redirect, then session variable will trigger success-message UI element
+                header("Location: contact.php");
+                
+            }   
         }
-
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -82,17 +108,26 @@
                 <button type="submit" name="submit" class="button">Submit</button>
 
                 <br>
+            </form>
 
-                <?php if(isset($inputsAreValid)): ?>
+            <!-- Session variables will determin the UI message outputs here -->
+            <?php if(isset($_SESSION['inputsHaveContent'])): ?>
 
-                    <?php if($inputsAreValid == false): ?>
-                        <div class="alert-message">Please enter information in all fields.</div>
-                    <?php else: ?>    
-                        <div class="success-message">E-mail sent!</div>
-                    <?php endif; ?>
+                <?php if($_SESSION['inputsHaveContent'] == false): ?>
+
+                    <div class="alert-message">Please enter information in all fields.</div>
+
+                <?php elseif($_SESSION['emailIsValid'] == false): ?>   
+
+                    <div class="alert-message">Please enter a valid e-mail address.</div>
+
+                <?php else: ?>    
+
+                    <div class="success-message">E-mail sent!</div>
 
                 <?php endif; ?>
-            </form>
+
+            <?php endif; ?>
         </div>
     </section>
 

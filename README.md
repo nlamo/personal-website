@@ -4,7 +4,6 @@ New design - personal portfolio website.
 
 TODO:
 
-- Complete the PHP contact form + validation.
 - Continue to refine the basic structure/styling of the grids and sections.
 - Create multiple self-portraits, insert them into the relevant sub-grid in 'About', and then use CSS animations to make them 'animated' on hover.
 - Polish the footer and try and resolve some difficulties in the interaction with the main section.
