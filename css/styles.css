@@ -2,14 +2,10 @@
     box-sizing: border-box; 
 }
 
-html {
-    height: 100%;
-}
-
 body {
     display: flex;
-    height: 100vh;
     flex-direction: column;
+    height: 100vh;
     font-family: 'Sen', sans-serif;
     margin: 0;
     padding: 0;
@@ -25,7 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px;
+    margin: 40px;
 }
 
 /* Left side of navigation bar */
@@ -69,10 +65,63 @@ section {
 
 }
 
-/* TODO: Large, panoramic, verdant black-and-white ink drawing */
-.landscape-drawing {
+/* For the CSS animation to follow, I am much obliged to these sources of help and inspiration.
 
+   These are very different solutions. I used a grid solution, but took inspiration from the
+   relative/absolute solution, which was too fussy for my purposes.
+
+   https://www.youtube.com/watch?v=sZJrcOfBaNY
+   https://www.taniarascia.com/crossfade-between-two-images-with-css-animations/ 
+   
+   Explanation: the drawings are layered using grid, and the top drawing fades to give
+   way to the bottom drawing. I will also be using this for self-portrait animations in my
+   'About' section.
+*/
+
+
+.landscape-drawings-container {
+    display: grid;
 }
+
+.landscape-drawings-container img {
+    max-width: 100%;
+    max-height: auto;
+}
+
+.bottom-drawing {
+    display: grid;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    
+}
+
+.top-drawing {
+    display: grid;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+  
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+/* Portfolio/project grid section */
 
 .portfolio-container {
     display: flex;
@@ -98,7 +147,7 @@ section {
     background:rgba(50, 92, 109, 0.7)
 }
 
-/* About section contains a main grid of two (2), which itself contains
+/* About section: contains a main grid of two (2), which itself contains
  * a sub-grid of four (4) in the left container, and an 'about-me' section on the right */
 
 .about-container {
