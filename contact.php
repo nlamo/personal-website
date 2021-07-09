@@ -1,4 +1,32 @@
 <?php
+    if (filter_has_var(INPUT_POST, 'submit')) 
+    {
+        // for use in the HTML code
+        $inputsAreValid = false;
+
+        if ( empty($_POST['email']) || empty($_POST['subject']) || empty($_POST['message']) )
+        {
+            // OUTPUT: displays an alter box below submit button (see PHP in the form)
+        }
+        else 
+        {
+            $inputsAreValid = true;
+
+            $senderemail = "Sent from " . htmlspecialchars($_POST['email']) . " :\n\n";
+
+            $to = "lamothe.dev@gmail.com";
+            $subject = htmlspecialchars($_POST['subject']);
+            $body = $senderemail . htmlspecialchars($_POST['message']);
+
+            // mail($to, $subject, $body)
+            // fourth additional parameter is vulnerable to injection attacks, apparently
+
+            // mail($to, $subject, $body);
+
+            // OUTPUT: displays a success box below submit button (see PHP in the form)
+        }
+
+    }
 
 ?>
 
@@ -33,35 +61,47 @@
 
     <section>
         <div class="form-container">
-            <form action="">
-                <p>Got a question, consideration, quandry, or curiosity? Feel free to reach out. </p><br>
+            <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <p><b>Got a question, consideration, quandry, or curiosity? Feel free to reach out. </b></p><br>
     
-                <label><u>Name</u></label><br><br>
-                <input type="text" name="name" size ="98">
+                <label><u>Email</u></label><br>
+                <input type="text" name="email">
         
-                <br><br>
+                <br>
         
-                <label><u>E-mail Address</u></label><br><br>
-                <input type="text" name="email" size ="98">
+                <label><u>Subject</u></label><br>
+                <input type="text" name="subject">
         
-                <br><br>
+                <br>
         
-                <label><u>Message</u></label><br><br>
-                <textarea name="message" id="job-descrption" cols="100" rows="14"></textarea>
+                <label><u>Message</u></label><br>
+                <textarea name="message" rows="12"></textarea>
 
                 <br><br>
         
-                <button type="submit" name="submit-info" class="button">Submit</button>
+                <button type="submit" name="submit" class="button">Submit</button>
+
+                <br>
+
+                <?php if(isset($inputsAreValid)): ?>
+
+                    <?php if($inputsAreValid == false): ?>
+                        <div class="alert-message">Please enter information in all fields.</div>
+                    <?php else: ?>    
+                        <div class="success-message">E-mail sent!</div>
+                    <?php endif; ?>
+
+                <?php endif; ?>
             </form>
         </div>
     </section>
 
     <footer>
         <div class="footer-container">
-            <a href="https://www.linkedin.com/in/nicholas-lamothe/">
+            <a href="https://www.linkedin.com/in/nicholas-lamothe/" target="_blank">
                 <img src="img/linkedin_logo.png">
             </a>
-            <a href="https://github.com/nlamo/">
+            <a href="https://github.com/nlamo/" target="_blank">
                 <img src="img/github_logo.png">
             </a>
 

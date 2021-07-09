@@ -200,13 +200,20 @@ section {
 }
 
 .form-container form {
-    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1rem;
 }
 
 .form-container button {
+    width: 40rem;
+    height: 3rem;
+    align-self: center;
     font-family: 'Sen', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
+
 /**********/
 /* Footer */
 /**********/
@@ -261,4 +268,28 @@ section {
     position: absolute;
     font-size: .7rem;
     right: 35px;
+}
+
+/***************/
+/** UTILITIES **/
+/***************/
+
+.alert-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    background-color: #922704;
+    color: #FFF;
+}
+
+.success-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    background-color: #5BBC9E;
+    color: #FFF;
 }
