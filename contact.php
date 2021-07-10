@@ -30,7 +30,7 @@
             $inputsHaveContent = true;
             $_SESSION['inputsHaveContent'] = $inputsHaveContent;      
 
-            $senderemail = "Sent from " . $email . " :\n\n";
+            $senderEmail = "Sent from " . $email . " :\n\n";
 
             // If e-mail is invalid, will redirect without calling mail()
             if ( (filter_var($email, FILTER_VALIDATE_EMAIL)) == false )
@@ -44,8 +44,8 @@
                 $_SESSION['emailIsValid'] = $emailIsValid;
     
                 $to = "lamothe.dev@gmail.com";
-                $subject = htmlspecialchars($_POST['subject']);
-                $body = $senderemail . htmlspecialchars($_POST['message']);
+             // $subject = already defined
+                $body = $senderEmail . $message;
                 mail($to, $subject, $body);
     
                 // Redirect, then session variable will trigger success-message UI element
@@ -63,6 +63,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <title>Nicholas LaMothe - Portfolio Website</title>
 </head>
@@ -70,15 +71,15 @@
     <header>
         <nav class="navigation">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="img/logo.png"alt="">
                 </a>
             </div>
 
             <div class="nav-list">
                 <ul>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.php">Portfolio</a></li>
+                    <li><a href="about.php">About</a></li>
                     <li><a href="contact.php" style="color:#FFF;">Contact</a></li>
                 </ul>
             </div>
@@ -101,7 +102,7 @@
                 <br>
         
                 <label><u>Message</u></label><br>
-                <textarea name="message" rows="12"></textarea>
+                <textarea name="message" rows="10"></textarea>
 
                 <br><br>
         
@@ -116,7 +117,7 @@
                 <?php if($_SESSION['inputsHaveContent'] == false): ?>
 
                     <div class="alert-message">Please enter information in all fields.</div>
-
+                    
                 <?php elseif($_SESSION['emailIsValid'] == false): ?>   
 
                     <div class="alert-message">Please enter a valid e-mail address.</div>

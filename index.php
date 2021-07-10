@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION['inputsHaveContent'])) 
+    {
+        session_destroy();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <title>Nicholas LaMothe - Portfolio Website</title>
 </head>
@@ -12,15 +22,15 @@
     <header>
         <nav class="navigation">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="img/logo.png"alt="">
                 </a>
             </div>
 
             <div class="nav-list">
                 <ul>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.php">Portfolio</a></li>
+                    <li><a href="about.php">About</a></li>
                     <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
