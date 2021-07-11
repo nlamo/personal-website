@@ -24,10 +24,24 @@ body {
     margin: 40px;
 }
 
+.logo { 
+    display: flex;
+    flex-direction: row;
+}
+
 /* Left side of navigation bar */
 .logo img {
     width: 80px;
     height:80px;
+}
+
+.job-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 60px;
+    font-size: 1.5rem;
+    color: #005C73;
 }
 
 /* Right side of navigation bar */
@@ -81,6 +95,7 @@ section {
 
 .landscape-drawings-container {
     display: grid;
+    position: relative;
 }
 
 .landscape-drawings-container img {
@@ -152,20 +167,22 @@ section {
  * a sub-grid of four (4) in the left container, and an 'about-me' section on the right */
 
 .about-container {
-    display: flex;
+    display: grid;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 .about-grid {
     display: grid;
     width: 100vw;
-    height: 600px;
+    max-height: 100%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 20px;
-    padding: 20px;
+    padding: 1rem;
 }
 
 .portrait-sub-grid {
@@ -181,7 +198,7 @@ section {
     justify-content: center;
     align-items: center;
     background:rgba(50, 92, 109, 0.7);
-    width: 75%;
+    width: 65%;
 }
 
 .about-me {
@@ -190,7 +207,7 @@ section {
     justify-content: center;
     align-items: center;
     margin-right: 4rem;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.8;
 }
 
@@ -200,6 +217,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 2rem;
 }
 
 .form-container form {

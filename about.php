@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media-queries.css">
 <title>Nicholas LaMothe - Portfolio Website</title>
 </head>
 <body>
@@ -25,6 +26,10 @@
                 <a href="index.php">
                     <img src="img/logo.png"alt="">
                 </a>
+
+                <div class="job-title">
+                    web development / ux
+                </div>
             </div>
 
             <div class="nav-list">
@@ -39,9 +44,8 @@
 
     <section>
         <div class="about-container">
-                       
             <div class="about-grid">
-                
+
                 <div class="portrait-sub-grid">
                     <div class="portrait">Portrait 1</div>
                     <div class="portrait">Portrait 2</div>
@@ -60,6 +64,7 @@
                         You can find my resume <a href="cv/Nicholas_LaMothe_CV.pdf">here</a>. 
                     </p>
                 </div>
+            </div>
         </div>
     </section>
 

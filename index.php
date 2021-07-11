@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media-queries.css">
     <title>Nicholas LaMothe - Portfolio Website</title>
 </head>
 <body>
@@ -25,7 +26,13 @@
                 <a href="index.php">
                     <img src="img/logo.png"alt="">
                 </a>
+
+                <div class="job-title">
+                    web development / ux
             </div>
+            </div>
+
+ 
 
             <div class="nav-list">
                 <ul>
@@ -36,11 +43,11 @@
             </div>
         </nav>
     </header>
-
+  
     <section>
         <div class="landscape-drawings-container">
-                <img class="bottom-drawing" src="img/landscape_outline_coloured.JPG" alt="">
-                <img class="top-drawing" src="img/landscape_outline.JPG" alt="">     
+            <img class="bottom-drawing" src="img/landscape_outline_coloured.JPG" alt="">
+            <img class="top-drawing" src="img/landscape_outline.JPG" alt="">   
         </div>
     </section>
 

@@ -1,0 +1,73 @@
+
+/* Small-ish screens (desktop/laptop) */
+@media screen and (min-width: 1024px) and (max-width:1280px) {
+
+    .about-me {
+        font-size: 1rem;
+    }
+
+    .portrait {
+        height: 90%;
+        width: 85%;
+    }
+}
+
+/* Much smaller screens (desktop/laptop) */
+@media screen and (min-width: 800px) and (max-width:1023px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .about-me {
+        font-size: .8rem;
+        margin: 0px 30px 0px 30px;
+    }
+
+    .portrait-sub-grid {
+        padding-top: 40px;
+        padding-right: 50px;
+      
+    }
+
+    .portrait {
+        height: 80%;
+        width: 100%;
+    }
+}
+
+/* Tablets and other related devices */
+@media screen and (min-width: 400px) and (max-width:799px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .about-me {
+        font-size: .8rem;
+        margin: 0px 30px 50px 30px;
+    }
+
+    .portrait-sub-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        padding-top: 40px;
+        padding-right: 50px;
+      
+    }
+
+    .portrait {
+        height: 80%;
+        width: 100%;
+    }
+}
+
+/* Large/small smartphones*/
+@media screen and (min-width: 0px) and (max-width:399px) {
+
+    .about-me {
+        font-size: .4em;
+    }
+}
