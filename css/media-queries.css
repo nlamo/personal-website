@@ -124,6 +124,10 @@
         display: none;
     }
 
+    .form-container {
+        width: 70%;
+    }
+
     .footer-container a img {
         width: 35%;
     }
@@ -167,7 +171,7 @@
         grid-row: span 2;
     }
 
-     .about-grid {
+    .about-grid {
         grid-template-columns: 1fr;
         grid-template-rows: .5fr 1fr;
     }
@@ -176,6 +180,7 @@
         font-size: .8rem;
         margin: 0px 30px 50px 30px;
     }
+
     .portrait-sub-grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;

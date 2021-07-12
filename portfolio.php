@@ -27,13 +27,13 @@
                     <img src="img/logo.png"alt="">
                 </a>
 
-                <!-- For regular display (styles.css) -->
+                <!-- For regular display (see: styles.css) -->
                 <div class="job-title">
                     web development / ux
                 </div>
             </div>
 
-            <!-- Only for smartphone queries (media-queries.css) -->
+            <!-- Only for smartphone queries (see: media-queries.css) -->
             <div class="smartphone-job-title">
                 web development / ux
             </div>
