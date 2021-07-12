@@ -205,11 +205,25 @@
     .portrait:nth-child(4) {
         display: none;
     }
+
+    .form-container p {
+        font-size: .8rem;
+    }
+
+    .form-container label {
+        font-size: .8rem;
+    }
+
+    .form-container button {
+        font-size: .8rem;
+    }
+
     .footer-container a img {
         width: 30%;
     }
 
     .copyright-overlay {
         font-size: .5rem;
+        right: 20px;
     }
 }
