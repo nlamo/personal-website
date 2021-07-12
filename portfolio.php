@@ -27,16 +27,22 @@
                     <img src="img/logo.png"alt="">
                 </a>
 
+                <!-- For regular display (styles.css) -->
                 <div class="job-title">
                     web development / ux
                 </div>
             </div>
 
+            <!-- Only for smartphone queries (media-queries.css) -->
+            <div class="smartphone-job-title">
+                web development / ux
+            </div>
+
             <div class="nav-list">
                 <ul>
-                    <li><a href="portfolio.php" style="color:#FFF;">Portfolio</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="portfolio.php" style="color:#FFF;">portfolio</a></li>
+                    <li><a href="about.php">about</a></li>
+                    <li><a href="contact.php">contact</a></li>
                 </ul>
             </div>
         </nav>

@@ -12,7 +12,7 @@
     }
 }
 
-/* Much smaller screens (desktop/laptop) */
+/* Smaller screens (desktop/laptop/tablet) */
 @media screen and (min-width: 800px) and (max-width:1023px) {
 
     .about-grid {
@@ -32,13 +32,64 @@
     }
 
     .portrait {
-        height: 80%;
+        height: 100%;
         width: 100%;
+    }
+
+    .portrait:nth-child(1) {
+        display: grid;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+    }
+
+    .portrait:nth-child(2) {
+        display: grid;
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 2;
+    }
+    
+    .portrait:nth-child(3) {
+        display: none;
+    }
+    
+    .portrait:nth-child(4) {
+        display: none;
     }
 }
 
-/* Tablets and other related devices */
-@media screen and (min-width: 400px) and (max-width:799px) {
+/* Very small screens, but still larger than smartphones */
+@media screen and (min-width: 500px) and (max-width:799px) {
+
+    section {
+        height: 1200px;
+    }
+
+    .navigation {
+        flex-direction: column;
+        margin: 40px 40px 15px 40px;
+    }
+
+    .job-title {
+        display: none;
+        align-items: center;
+    }
+
+    .smartphone-job-title {
+        display: flex;
+        margin: 10px 0px 25px 0px;
+    }
+
+    .portfolio-grid {
+        height: 1200px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .project {
+        grid-row: span 2;
+    }
 
     .about-grid {
         grid-template-columns: 1fr;
@@ -52,22 +103,112 @@
 
     .portrait-sub-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        padding-top: 40px;
+        grid-template-rows: 1fr;
+        padding-top: 80px;
         padding-right: 50px;
       
     }
 
     .portrait {
-        height: 80%;
+        height: 90%;
         width: 100%;
     }
+
+    .portrait:nth-child(2) {
+        display: none;
+    }
+
+    .portrait:nth-child(3) {
+        display: none;
+    }
+    
+    .portrait:nth-child(4) {
+        display: none;
+    }
+
+    .footer-container a img {
+        width: 35%;
+    }
+
+    .copyright-overlay {
+        font-size: .5rem;
+    }
+
 }
 
 /* Large/small smartphones*/
-@media screen and (min-width: 0px) and (max-width:399px) {
+@media screen and (min-width: 0px) and (max-width:499px) {
+
+    section {
+        height: 1400px;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        margin: 40px 40px 15px 40px;
+    }
+
+    .job-title {
+        display: none;
+        align-items: center;
+    }
+
+    .smartphone-job-title {
+        display: flex;
+        margin: 10px 0px 25px 0px;
+    }
+
+    .portfolio-grid {
+        height: 1200px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .project {
+        height: 90%;
+        grid-row: span 2;
+    }
+
+     .about-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 1fr;
+    }
 
     .about-me {
-        font-size: .4em;
+        font-size: .8rem;
+        margin: 0px 30px 50px 30px;
+    }
+    .portrait-sub-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding-top: 80px;
+        padding-right: 50px;
+      
+    }
+
+    .portrait {
+        height: 90%;
+        width: 100%;
+    }
+
+    .portrait:nth-child(2) {
+        display: none;
+    }
+
+    .portrait:nth-child(3) {
+        display: none;
+    }
+    
+    .portrait:nth-child(4) {
+        display: none;
+    }
+    .footer-container a img {
+        width: 30%;
+    }
+
+    .copyright-overlay {
+        font-size: .5rem;
     }
 }

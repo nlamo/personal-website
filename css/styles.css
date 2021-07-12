@@ -40,13 +40,19 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding-left: 60px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    color: #005C73;
+}
+
+.smartphone-job-title {
+    display: none;
     color: #005C73;
 }
 
 /* Right side of navigation bar */
 .nav-list ul {
     display: flex;
+    padding-left: 0;
     list-style: none;
 }   
 
@@ -75,6 +81,7 @@ section {
     justify-content: center;
     align-items: center;
     height: 650px;
+    width: 100vw;
     background: #FFF;
 
 }
