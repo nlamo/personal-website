@@ -122,7 +122,7 @@
                 <br>
             </form>
 
-            <!-- Session variables will determin the UI message outputs here -->
+            <!-- Session variables will determine the UI message outputs here -->
             <?php if(isset($_SESSION['inputsHaveContent'])): ?>
 
                 <?php if($_SESSION['inputsHaveContent'] == false): ?>
