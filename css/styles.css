@@ -14,7 +14,7 @@ body {
 
 
 /******************/
-/* Navigation bar */
+/* NAVIGATION BAR */
 /******************/
 
 .navigation {
@@ -73,7 +73,7 @@ body {
 
 
 /*****************/
-/* Main sections */
+/* MAIN SECTIONS */
 /*****************/
 
 section {
@@ -197,7 +197,7 @@ section {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
-    padding: 10px 10px 0px 40px;
+    padding: 30px 10px 0px 40px;
 }
 
 .portrait {
@@ -216,9 +216,10 @@ section {
     margin-right: 4rem;
     font-size: 1.1rem;
     line-height: 1.8;
+    margin: 20px;
 }
 
-/* Contact 300 stuff */
+/* Contact form section */
 
 .form-container {
     display: flex;
@@ -257,7 +258,7 @@ section {
 }
 
 /**********/
-/* Footer */
+/* FOOTER */
 /**********/
 
 .footer-container {
@@ -322,6 +323,7 @@ section {
     align-items: center;
     width: 100%;
     height: 2rem;
+    margin-bottom: 15px;
     background-color: #922704;
     color: #FFF;
 }
@@ -332,6 +334,7 @@ section {
     align-items: center;
     width: 100%;
     height: 2rem;
+    margin-bottom: 10px;
     background-color: #5BBC9E;
     color: #FFF;
 }

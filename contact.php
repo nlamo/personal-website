@@ -127,11 +127,11 @@
 
                 <?php if($_SESSION['inputsHaveContent'] == false): ?>
 
-                    <div class="alert-message">Please enter information in all fields.</div>
+                    <div class="alert-message">Please enter information within all fields.</div>
                     
                 <?php elseif($_SESSION['emailIsValid'] == false): ?>   
 
-                    <div class="alert-message">Please enter a valid e-mail address.</div>
+                    <div class="alert-message">Please use a valid e-mail address.</div>
 
                 <?php else: ?>    
 

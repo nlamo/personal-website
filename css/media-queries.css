@@ -159,6 +159,7 @@
         width: 65px;
         height: 65px;
     }
+
     .nav-list ul {
         font-size: .9rem;
     }
@@ -220,15 +221,15 @@
     }
     
     .form-container p {
-        font-size: .9rem;
+        font-size: .8rem;
     }
 
     .form-container label {
-        font-size: .9rem;
+        font-size: .8rem;
     }
 
     .form-container button {
-        font-size: .9rem;
+        font-size: .8rem;
     }
 
     .footer-container a img {
@@ -238,5 +239,13 @@
     .copyright-overlay {
         font-size: .5rem;
         right: 20px;
+    }
+
+    .alert-message {
+        font-size: .8rem;
+    }
+
+    .success-message {
+        font-size: .8rem;
     }
 }
