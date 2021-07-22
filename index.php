@@ -50,8 +50,8 @@
   
     <section>
         <div class="landscape-drawings-container">
-            <img class="bottom-drawing" src="img/landscape_outline_coloured.JPG" alt="">
-            <img class="top-drawing" src="img/landscape_outline.JPG" alt="">   
+            <img class="bottom-portrait" src="img/landscape_outline_coloured.JPG" alt="">
+            <img class="top-portrait" src="img/landscape_outline.JPG" alt="">   
         </div>
     </section>
 

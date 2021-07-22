@@ -10,3 +10,7 @@ TODO:
 - Tinker with grid and get the items to conform nicely to a set aspect ratio.
 - Polish the footer and try and resolve some difficulties in the interaction with the main section.
 - Fix the zoom issue for the index page image/animation.
+
+THOUGHTS:
+
+- Original portfolio will likely be much smaller than expected. Aim for four projects, and then stagger their descriptions with the project grid items, and style them accordingly on hover.

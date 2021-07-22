@@ -191,18 +191,39 @@ section {
     padding: 1rem;
 }
 
-.portrait {
-    display: flex;
+/* Using the same method as with the index page drawings */
+
+.portrait-container {
+    display: grid;
+    position: relative;
     justify-content: center;
     align-items: center;
     place-self: center;
     width: 500px;
 }
 
-.portrait img {
+.portrait-container img {
     align-content: center;
     align-self: center;
     width: 100%;
+}
+
+.bottom-portrait {
+    display: grid;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1; 
+}
+
+.top-portrait {
+    display: grid;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
 }
 
 .about-me {
