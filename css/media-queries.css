@@ -1,15 +1,27 @@
-
 /* Small-ish screens (desktop/laptop) */
 @media screen and (min-width: 1024px) and (max-width:1280px) {
 
-    .about-me {
-        font-size: 1rem;
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
     .portrait {
         height: 90%;
         width: 85%;
     }
+
+    .portrait img {
+        align-content: center;
+        align-self: center;
+        width: 100%;
+    }
+
+    .about-me {
+        font-size: .9rem;
+
+    }
+
+    
 }
 
 /* Smaller screens (desktop/laptop/tablet) */
@@ -24,41 +36,14 @@
         grid-template-rows: 1fr 1fr;
     }
 
-    .portrait-sub-grid {
-        padding-top: 40px;
-        padding-right: 50px;
-      
-    }
-
     .portrait {
-        height: 100%;
-        width: 100%;
-    }
+        margin-top: 40px;
+        margin-bottom: -20px;
+    }    
 
-    .portrait:nth-child(1) {
-        display: grid;
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 2;
-    }
-
-    .portrait:nth-child(2) {
-        display: grid;
-        grid-column: 2 / span 1;
-        grid-row: 1 / span 2;
-    }
-    
-    .portrait:nth-child(3) {
-        display: none;
-    }
-    
-    .portrait:nth-child(4) {
-        display: none;
-    }
-
-    
     .about-me {
         font-size: .9rem;
-        margin: 30px 30px 30px 30px;
+        margin: 30px 30px -20px 30px;
     }
 }
 
@@ -90,43 +75,19 @@
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
-    .project {
-        grid-row: span 2;
-    }
-
     .about-grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
     }
 
-    .portrait-sub-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        padding-top: 80px;
-        padding-right: 50px;
-      
-    }
-
     .portrait {
-        height: 90%;
-        width: 100%;
-    }
-
-    .portrait:nth-child(2) {
-        display: none;
-    }
-
-    .portrait:nth-child(3) {
-        display: none;
-    }
-    
-    .portrait:nth-child(4) {
-        display: none;
-    }
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }    
 
     .about-me {
         font-size: .9rem;
-        margin: 0px 30px 50px 30px;
+        margin: 0px 30px 30px 30px;
     }
 
     .form-container {
@@ -180,39 +141,20 @@
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 
-    .project {
-        height: 90%;
-        grid-row: span 2;
-    }
-
     .about-grid {
         grid-template-columns: 1fr;
         grid-template-rows: .5fr 1fr;
     }
 
-    .portrait-sub-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        padding-top: 80px;
-        padding-right: 50px;
-      
-    }
-
     .portrait {
+        margin-top: 20px;
+        margin-bottom: 20px;
         height: 90%;
         width: 100%;
     }
 
-    .portrait:nth-child(2) {
-        display: none;
-    }
-
-    .portrait:nth-child(3) {
-        display: none;
-    }
-    
-    .portrait:nth-child(4) {
-        display: none;
+    .portrait img {
+        width: 75%;
     }
 
     .about-me {

@@ -186,26 +186,24 @@ section {
     display: grid;
     width: 100vw;
     max-height: 100%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr .15fr; /* the .15 is just for spacing the other elements */
     grid-template-rows: 1fr;
     gap: 20px;
     padding: 1rem;
-}
-
-.portrait-sub-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    padding: 30px 10px 0px 40px;
 }
 
 .portrait {
     display: flex;
     justify-content: center;
     align-items: center;
-    background:rgba(50, 92, 109, 0.7);
-    width: 65%;
+    place-self: center;
+    width: 500px;
+}
+
+.portrait img {
+    align-content: center;
+    align-self: center;
+    width: 100%;
 }
 
 .about-me {
@@ -213,10 +211,11 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 4rem;
+    margin-top: 60px;
+    margin-right: 60px;
+    margin-bottom: 60px;
     font-size: 1.1rem;
     line-height: 1.8;
-    margin: 20px;
 }
 
 /* Contact form section */
