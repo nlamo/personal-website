@@ -100,9 +100,9 @@
     <section>
         <div class="form-container">
             <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                <p><b>Got a question, consideration, quandry, or curiosity? Feel free to reach out. </b></p><br>
+                <p><b>Got a question, consideration, or curiosity? Feel free to reach out. </b></p><br>
     
-                <label><u>Email</u></label><br>
+                <label><u>E-mail</u></label><br>
                 <input type="text" name="email">
         
                 <br>
