@@ -15,6 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/media-queries.css">
     <title>Nicholas LaMothe - Portfolio Website</title>
@@ -51,7 +53,11 @@
     <section>
         <div class="landscape-drawings-container">
             <img class="bottom-portrait" src="img/landscape_outline_coloured.JPG" alt="">
-            <img class="top-portrait" src="img/landscape_outline.JPG" alt="">   
+            <img class="top-portrait" src="img/landscape_outline.JPG" alt="">
+                <div class="speech-bubble">Greetings! I'm Nick. Welcome to my website. </div>
+            </img>
+            
+         
         </div>
     </section>
 
