@@ -98,13 +98,17 @@ section {
    'About' section.
 */
 
+/* DEFAULT VISIBILITY: container, imgs, bubble are hidden by default for the */
+/*                     loader and then made visible via JS script.           */
 
 .landscape-drawings-container {
+    visibility: hidden;
     display: grid;
     position: relative;
 }
 
 .landscape-drawings-container img {
+    visibility: hidden;
     max-width: 100%;
     max-height: auto;
 }
@@ -112,8 +116,7 @@ section {
 .bottom-drawing {
     display: grid;
     grid-column: 1 / span 1;
-    grid-row: 1 / span 1; 
-    
+    grid-row: 1 / span 1;    
 }
 
 .top-drawing {
@@ -140,12 +143,13 @@ section {
     100% {
       opacity: 0;
     }
-  }
+}
 
 /* Attribution: Khaled Ahmed Younes, https://codepen.io/KhaledAhmedYounes/pen/xXqYGY */
 /*              Modified to suit my needs. Very much appreciated! */
 
   .speech-bubble {
+    visibility: hidden;
     position: absolute;
     font-family: 'Philosopher', serif;
     font-size: 1.5rem;
@@ -164,7 +168,7 @@ section {
     animation-name: expand-bounce;
     animation-fill-mode: forwards;
     animation-duration: .60s;
-    animation-delay: 1s;
+    animation-delay: 2s;
   }
 
   .speech-bubble::before {
@@ -190,7 +194,7 @@ section {
     100% {
       transform: scale(1);
     }
-  }
+}
   
 /* Portfolio/project grid section */
 
