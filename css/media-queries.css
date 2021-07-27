@@ -18,6 +18,7 @@
 
     .about-me {
         font-size: .9rem;
+        margin-right: 60px;
 
     }   
 }
@@ -41,7 +42,7 @@
 
     .about-me {
         font-size: .9rem;
-        margin: 30px 30px -20px 30px;
+        margin: 30px 60px -20px 30px;
     }
 }
 
@@ -86,7 +87,7 @@
 
     .about-me {
         font-size: .9rem;
-        margin: 0px 30px 30px 30px;
+        margin: 0px 60px 30px 30px;
     }
 
     .form-container {
