@@ -76,6 +76,6 @@
         </div>
     </footer>
 
-    <script src="script.js" async></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

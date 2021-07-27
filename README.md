@@ -4,8 +4,9 @@ New design - personal portfolio website.
 
 TODO:
 
-- Experiment with gradients for the background colour.
+- Hide the landscape images/speech bubble *by default* to prevent image from showing when loader is running. Change the JS.
 - Adjust 'absolute' positioning for each query for the speech bubble on index page.
+- Experiment with gradients for the background colour.
 - Make 'About' section self-portrait into a CSS animation, experiment with variations.
 - Continue to refine the basic structure/styling of the grids and sections.
 - Tinker with grid and get the items to conform nicely to a set aspect ratio.

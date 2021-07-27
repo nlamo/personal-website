@@ -4,18 +4,20 @@ const topPortrait = document.getElementById('top-portrait');
 const bottomPortrait = document.getElementById('bottom-portrait');
 const speechBubble = document.getElementById('speech-bubble');
 
-function showLoadingSpinner() {
+function loadLandscapeScene() {
     bottomPortrait.style.visibility = 'hidden';
     topPortrait.style.visibility = 'hidden';
     speechBubble.hidden = true;
     landscapeDrawings.hidden = true;
-    loadingSpinner.hidden = false;
+    
+    showLoadingSpinner();
 }
 
-function removeLoadingSpinner() {
+function showLandscapeScene() {
 
     setTimeout(function() {
-        loadingSpinner.hidden = true;
+        hideLoadingSpinner();
+
         landscapeDrawings.hidden = false;
         speechBubble.hidden = false;
         bottomPortrait.style.visibility = 'visible'; 
@@ -23,5 +25,14 @@ function removeLoadingSpinner() {
       }, 1500);
 }
 
-showLoadingSpinner();
-removeLoadingSpinner();
+function showLoadingSpinner() {
+    loadingSpinner.hidden = false;
+}
+
+function hideLoadingSpinner() {
+    loadingSpinner.hidden = true;
+};
+
+
+loadLandscapeScene();
+showLandscapeScene();
