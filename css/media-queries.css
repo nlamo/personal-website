@@ -1,6 +1,10 @@
 /* Small-ish screens (desktop/laptop) */
 @media screen and (min-width: 1024px) and (max-width:1280px) {
 
+    .speech-bubble { 
+        top: 27%;
+    }
+
     .about-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -23,6 +27,7 @@
     }   
 }
 
+
 /* Smaller screens (desktop/laptop/tablet) */
 @media screen and (min-width: 800px) and (max-width:1023px) {
 
@@ -30,6 +35,11 @@
         height: 1200px;
     }
     
+    .speech-bubble { 
+        top: 19%;
+    }
+
+
     .about-grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -52,6 +62,13 @@
 
     section {
         height: 1200px;
+    }
+
+    .speech-bubble { 
+        font-size: 1rem;
+        width: 200px;
+        height: 125px;
+        top: 10%;
     }
 
     .navigation {
@@ -112,6 +129,13 @@
         height: 1400px;
     }
     
+    .speech-bubble { 
+        font-size: .8rem;
+        width: 100px;
+        height: 75px;
+        top: 1px;
+    }
+
     .navigation {
         flex-direction: column;
         margin: 40px 40px 15px 40px;
@@ -183,6 +207,11 @@
     .copyright-overlay {
         font-size: .5rem;
         right: 20px;
+    }
+
+    .loader {
+        width: 80px;
+        height: 80px;
     }
 
     .alert-message {

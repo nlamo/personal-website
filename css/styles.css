@@ -82,7 +82,6 @@ section {
     height: 650px;
     width: 100vw;
     background: #FFF;
-
 }
 
 /* For the CSS animation to follow, I am much obliged to these sources of help and inspiration.
@@ -150,19 +149,22 @@ section {
 
   .speech-bubble {
     visibility: hidden;
+    display: flex;
+    text-align: center;
+    align-items: center;
     position: absolute;
     font-family: 'Philosopher', serif;
     font-size: 1.5rem;
-    text-align: center;
     transform-origin: 0% 100%;
     background-color: #e4dada;
     opacity: .9;
     color: rgb(0, 0, 0);
     border-radius: 15px;
-    width: 300px;
-    padding: 10px;
+    width: 325px;
+    height: 150px;
+    padding: 15px;
     left: 56%;
-    top: 51%;
+    top: 42%;
     transform: scale(0);
 
     animation-name: expand-bounce;
