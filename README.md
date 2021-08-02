@@ -1,6 +1,6 @@
 # personal-website
 
-New design - personal portfolio website.
+New design - personal website.
 
 TODO:
 
@@ -14,3 +14,4 @@ TODO:
 THOUGHTS:
 
 - Original portfolio will likely be much smaller than expected. Aim for four projects, and then stagger their descriptions with the project grid items, and style them accordingly on hover.
+- Excluding the portfolio page from the hosted website until I've developed a somewhat respectable personal portfolio.

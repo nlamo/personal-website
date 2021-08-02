@@ -39,7 +39,6 @@
         top: 19%;
     }
 
-
     .about-grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -128,7 +127,7 @@
     section {
         height: 1400px;
     }
-    
+
     .speech-bubble { 
         font-size: .8rem;
         width: 100px;

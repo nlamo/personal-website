@@ -50,7 +50,6 @@
     
                 // Redirect, then session variable will trigger success-message UI element
                 header("Location: contact.php");
-                
             }   
         }
     }
@@ -89,7 +88,7 @@
 
             <div class="nav-list">
                 <ul>
-                    <li><a href="portfolio.php">portfolio</a></li>
+                    <!-- <li><a href="portfolio.php">portfolio</a></li> -->
                     <li><a href="about.php">about</a></li>
                     <li><a href="contact.php" style="color:#FFF;">contact</a></li>
                 </ul>

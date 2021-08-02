@@ -1,3 +1,6 @@
+<!-- NOTE: This page is being put aside for now until a more substantial personal
+           portfolio warrants its existence. -->
+
 <?php
     session_start();
 
