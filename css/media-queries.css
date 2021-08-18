@@ -129,7 +129,7 @@
     }
 
     .speech-bubble { 
-        font-size: .8rem;
+        font-size: .6rem;
         width: 100px;
         height: 75px;
         top: 1px;
@@ -137,7 +137,8 @@
 
     .navigation {
         flex-direction: column;
-        margin: 40px 40px 15px 40px;
+        margin: 25px 25px 15px 40px;
+        padding: 0px;
     }
 
     .logo img {
@@ -156,7 +157,7 @@
 
     .smartphone-job-title {
         display: flex;
-        margin: 10px 0px 25px 0px;
+        margin: 10px 0px 15px 0px;
     }
 
     .portfolio-grid {
@@ -199,8 +200,13 @@
         font-size: .8rem;
     }
 
+    .footer-container {
+        height: 70px;
+    }
+    
     .footer-container a img {
-        width: 30%;
+        width: 25%;
+        height: 40%;
     }
 
     .copyright-overlay {
