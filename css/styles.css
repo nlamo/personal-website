@@ -9,7 +9,9 @@ body {
     font-family: 'Sen', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #8AC1C5;
+    background: #085078;
+    background: -webkit-linear-gradient(to left, #83C2BC, #8DBDD6);
+    background: linear-gradient(to left, #83C2BC, #8DBDD6);
 }
 
 
@@ -125,7 +127,7 @@ section {
 
     animation-name: fade;
     animation-timing-function: ease-in-out;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
   
@@ -153,7 +155,7 @@ section {
     text-align: center;
     align-items: center;
     position: absolute;
-    font-family: 'Philosopher', serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 1.5rem;
     transform-origin: 0% 100%;
     background-color: #e4dada;
@@ -170,7 +172,7 @@ section {
     animation-name: expand-bounce;
     animation-fill-mode: forwards;
     animation-duration: .60s;
-    animation-delay: 2s;
+    animation-delay: 2.5s;
   }
 
   .speech-bubble::before {
@@ -279,7 +281,7 @@ section {
     animation-timing-function: ease-in-out;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 1.5s;
 }
 
 .about-me {
@@ -343,7 +345,9 @@ section {
     justify-content: center;
     align-items: center;
     overflow: auto; 
-    background: #8AC1C5;
+    background: #085078;
+    background: -webkit-linear-gradient(to left, #83C2BC, #8DBDD6);
+    background: linear-gradient(to left, #83C2BC, #8DBDD6);
 }
 
 .footer-container a { 
@@ -399,7 +403,7 @@ section {
     border-radius: 50%;
     width: 160px;
     height: 160px;
-    animation: spin 2s linear infinite;
+    animation: spin 1.7s linear infinite;
   }
 
   @keyframes spin {
