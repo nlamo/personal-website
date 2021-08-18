@@ -96,7 +96,7 @@
         </nav>
     </header>
 
-    <section>
+    <section class="smartphone-contact-section">
         <div class="form-container">
             <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <p><b>Got a question, consideration, or curiosity? Feel free to reach out. </b></p><br>

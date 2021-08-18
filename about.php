@@ -48,7 +48,7 @@
         </nav>
     </header>
 
-    <section>
+    <section class="smartphone-about-section">
         <div class="about-container">
             <div class="about-grid">
 

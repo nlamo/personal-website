@@ -50,7 +50,7 @@
         </nav>
     </header>
   
-    <section>
+    <section class="smartphone-index-section">
         <div class="loader" id="loader"></div>
 
         <div class="landscape-drawings-container" id="landscape-drawings-container">

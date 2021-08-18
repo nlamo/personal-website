@@ -124,21 +124,34 @@
 /* Large/small smartphones*/
 @media screen and (min-width: 0px) and (max-width:499px) {
 
-    section {
-        height: 1400px;
+    body {
+        height: 100%;
+    }
+
+    .smartphone-index-section {
+        height: 450px;
+    }
+
+    .smartphone-about-section {
+        height: 1000px;
+    }
+
+    .smartphone-contact-section {
+        height: 600px;
     }
 
     .speech-bubble { 
         font-size: .6rem;
         width: 100px;
         height: 75px;
-        top: 1px;
+        top: -4px;
     }
 
     .navigation {
         flex-direction: column;
-        margin: 25px 25px 15px 40px;
-        padding: 0px;
+        height: 175px;
+        margin: 40px 0px 20px 0px;
+
     }
 
     .logo img {
@@ -157,7 +170,7 @@
 
     .smartphone-job-title {
         display: flex;
-        margin: 10px 0px 15px 0px;
+        margin: 0px 0px 15px 0px;
     }
 
     .portfolio-grid {
