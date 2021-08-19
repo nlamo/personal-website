@@ -117,7 +117,13 @@ section {
 .bottom-drawing {
     display: grid;
     grid-column: 1 / span 1;
-    grid-row: 1 / span 1;    
+    grid-row: 1 / span 1; 
+}
+
+.bottom-drawing-smartphone {
+    display: none;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1; 
 }
 
 .top-drawing {
@@ -129,6 +135,19 @@ section {
     animation-timing-function: ease-in-out;
     animation-duration: 2s;
     animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+.top-drawing-smartphone {
+    display: none;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
 }
   
   @keyframes fade {

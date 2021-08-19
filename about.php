@@ -53,8 +53,8 @@
             <div class="about-grid">
 
                 <div class="portrait-container">
-                    <img class="bottom-drawing" src="img/portrait2.jpg" alt="">
-                    <img class="top-drawing" src="img/portrait1.jpg" alt="">
+                    <img class="bottom-portrait" src="img/portrait2.jpg" alt="">
+                    <img class="top-portrait" src="img/portrait1.jpg" alt="">
                 </div>
 
                 <div class="about-me">

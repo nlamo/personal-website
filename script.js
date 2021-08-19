@@ -4,8 +4,10 @@
 
 const loadingSpinner = document.getElementById('loader');
 const landscapeDrawings = document.getElementById('landscape-drawings-container');
-const topPortrait = document.getElementById('top-portrait');
-const bottomPortrait = document.getElementById('bottom-portrait');
+const topDrawing = document.getElementById('top-drawing');
+const topDrawingSmartphone = document.getElementById('top-drawing-smartphone');
+const bottomDrawing = document.getElementById('bottom-drawing');
+const bottomDrawingSmartphone = document.getElementById('bottom-drawing-smartphone');
 const speechBubble = document.getElementById('speech-bubble');
 
 function loadLandscapeScene() {
@@ -21,8 +23,10 @@ function showLandscapeScene() {
 
         landscapeDrawings.style.visibility = 'visible';
         speechBubble.style.visibility = 'visible';
-        bottomPortrait.style.visibility = 'visible'; 
-        topPortrait.style.visibility = 'visible';
+        bottomDrawing.style.visibility = 'visible'; 
+        bottomDrawingSmartphone.style.visibility = 'visible'; 
+        topDrawing.style.visibility = 'visible';
+        topDrawingSmartphone.style.visibility = 'visible';
       }, 1500);
 }
 

@@ -54,9 +54,13 @@
         <div class="loader" id="loader"></div>
 
         <div class="landscape-drawings-container" id="landscape-drawings-container">
-            <img class="bottom-portrait" id="bottom-portrait" src="img/landscape_outline_coloured.JPG" alt="">
-            <img class="top-portrait" id="top-portrait" src="img/landscape_outline.JPG" alt="">
-    
+            
+            <img class="bottom-drawing" id="bottom-drawing" src="img/landscape_outline_coloured.JPG" alt="">
+            <img class="bottom-drawing-smartphone" id="bottom-drawing-smartphone" src="img/landscape_outline_coloured_smartphone.JPG" alt="">
+
+            <img class="top-drawing" id="top-drawing" src="img/landscape_outline.JPG" alt="">
+            <img class="top-drawing-smartphone" id="top-drawing-smartphone" src="img/landscape_outline_smartphone.JPG" alt="">
+
             <div class="speech-bubble" id="speech-bubble">Greetings! I'm Nick. Welcome to my website. </div>
         </div>
     </section>

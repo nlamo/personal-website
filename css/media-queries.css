@@ -140,11 +140,28 @@
         height: 600px;
     }
 
+    .bottom-drawing {
+        display: none;
+    }
+
+    .bottom-drawing-smartphone {
+        display: grid;
+    }
+
+    .top-drawing {
+        display: none;
+    }
+
+    .top-drawing-smartphone {
+        display: grid;
+    }
+
     .speech-bubble { 
         font-size: .6rem;
         width: 100px;
         height: 75px;
-        top: -4px;
+        top: 30px;
+        left: 263px;
     }
 
     .navigation {
