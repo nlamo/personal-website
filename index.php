@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    if (isset($_SESSION['inputsHaveContent'])) 
+    if (isset($_SESSION['inputsHaveContent']))
     {
         session_destroy();
     }
@@ -49,12 +49,12 @@
             </div>
         </nav>
     </header>
-  
+
     <section class="smartphone-index-section">
         <div class="loader" id="loader"></div>
 
         <div class="landscape-drawings-container" id="landscape-drawings-container">
-            
+
             <img class="bottom-drawing" id="bottom-drawing" src="img/landscape_outline_coloured.JPG" alt="">
             <img class="bottom-drawing-smartphone" id="bottom-drawing-smartphone" src="img/landscape_outline_coloured_smartphone.JPG" alt="">
 
