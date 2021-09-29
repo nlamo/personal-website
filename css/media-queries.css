@@ -1,4 +1,47 @@
-/* Small-ish screens (desktop/laptop) */
+/* Widescreen (1920 x 1080, 16:9) */
+@media (min-aspect-ratio: 16/9) {
+
+    .navigation {
+        height: 50px;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .speech-bubble { 
+        font-size: 1.2rem;
+        width: 275px;
+        height: 150px;
+    }
+
+    .top-drawing {
+        display: none;
+    }
+
+    .top-drawing-smartphone {
+        display: none;
+    }
+
+    .top-drawing-wide {
+        display: grid;
+    }
+
+    .bottom-drawing {
+        display: none;
+    }
+
+    .bottom-drawing-smartphone {
+        display: none;
+    }
+
+    .bottom-drawing-wide {
+        display: grid;
+    }
+  }
+
+/* Small-ish desktop/laptop */
 @media screen and (min-width: 1024px) and (max-width:1280px) {
 
     .speech-bubble { 
@@ -144,11 +187,19 @@
         display: none;
     }
 
+    .bottom-drawing-wide {
+        display: none;
+    }
+
     .bottom-drawing-smartphone {
         display: grid;
     }
 
     .top-drawing {
+        display: none;
+    }
+
+    .top-drawing-wide {
         display: none;
     }
 
