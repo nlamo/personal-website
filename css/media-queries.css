@@ -31,10 +31,6 @@
 /* Smaller screens (desktop/laptop/tablet) */
 @media screen and (min-width: 800px) and (max-width:1023px) {
 
-    section {
-        height: 1200px;
-    }
-    
     .speech-bubble { 
         top: 19%;
     }
@@ -58,10 +54,6 @@
 
 /* Very small screens, but still larger than smartphones */
 @media screen and (min-width: 500px) and (max-width:799px) {
-
-    section {
-        height: 1200px;
-    }
 
     .speech-bubble { 
         font-size: 1rem;
