@@ -126,12 +126,6 @@ section {
     grid-row: 1 / span 1; 
 }
 
-.bottom-drawing-wide {
-    display: none;
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1; 
-}
-
 .top-drawing {
     display: grid;
     grid-column: 1 / span 1;
@@ -156,18 +150,6 @@ section {
     animation-delay: 1.5s;
 }
   
-.top-drawing-wide {
-    display: none;
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1; 
-
-    animation-name: fade;
-    animation-timing-function: ease-in-out;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-delay: 1.5s;
-}
-
   @keyframes fade {
     0% {
       opacity: 1;
@@ -318,7 +300,7 @@ section {
     animation-timing-function: ease-in-out;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    animation-delay: .5s;
+    animation-delay: 1.5s;
 }
 
 .about-me {
