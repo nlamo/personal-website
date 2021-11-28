@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 40px;
+    margin: 30px 40px 30px 40px;
 }
 
 .logo { 
@@ -33,8 +33,8 @@ body {
 
 /* Left side of navigation bar */
 .logo img {
-    width: 80px;
-    height:80px;
+    width: 45px;
+    height: 45px;
 }
 
 .job-title {
@@ -434,7 +434,7 @@ section {
 /***************/
 
 .loader {
-    position: fixed;
+    position: absolute;
     border: 0px solid #f3f3f3; /* Light grey */
     border-top: 10px solid #76a6c7; /* Blue */
     border-radius: 50%;

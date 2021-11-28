@@ -63,7 +63,7 @@
 
                         Eventually, I became enthralled by the study of philosophy and literature, with a special interest in philosophy of mind, ethics, and modernism, thus forming the basis of my undegraduate studies. Years later, by way of literary insight, I was compelled to start programming.<br></br>
 
-                        I've recently completed a post-bacc graduate diploma in computer science. Currently, I'm working on learning React and improving my CSS and design skills. I also love to cycle and illustrate, and I even like to try my hand at a few algorithms, here and there.<br><br>
+                        I've recently completed a post-bacc graduate diploma in computer science. These days, I work primarily with a LAMP stack, but I try and keep afresh with small projects. I also love to cycle and illustrate, and I even like to try my hand at a few algorithms, here and there.<br><br>
 
                         You can find my resume <a href="cv/Nicholas_LaMothe_CV.pdf">here</a>.
                     </p>
