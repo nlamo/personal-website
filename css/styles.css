@@ -79,9 +79,10 @@ body {
 
 section {
     display: flex;
+    flex: 1 0 auto;
     justify-content: center;
     align-items: center;
-    height: 650px;
+    height: auto;
     width: 100vw;
     background: #FFF;
 }
@@ -358,6 +359,7 @@ section {
 /**********/
 
 .footer-container {
+    flex: 1 0 auto;
     height: 12vh;
     display: flex;
     position: relative;
