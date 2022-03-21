@@ -32,13 +32,13 @@
 
                 <!-- For regular display (see: styles.css) -->
                 <div class="job-title">
-                    web development / ux
+                    web development
                 </div>
             </div>
 
             <!-- Only for smartphone queries (see: media-queries.css) -->
             <div class="smartphone-job-title">
-                web development / ux
+                web development
             </div>
 
             <div class="nav-list">
