@@ -1,7 +1,6 @@
 // NOTE: Before, I was using JS to hide the *images* for the landscape display.
 //       Instead, now, I hide them by default, just so prevent any weird issues on first load.
 
-
 const loadingSpinner = document.getElementById('loader');
 const landscapeDrawings = document.getElementById('landscape-drawings-container');
 const topDrawing = document.getElementById('top-drawing');

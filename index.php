@@ -72,11 +72,12 @@
             </a>
 
             <div class="copyright-overlay">
-                &copy; 2021 Nicholas LaMothe
+                &copy; <span id="current-year"></span> Nicholas LaMothe
             </div>
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="js/loader.js" defer></script>
+    <script src="js/time.js" defer></script>
 </body>
 </html>
