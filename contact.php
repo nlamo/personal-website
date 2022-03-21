@@ -103,30 +103,18 @@
                 <label><u>E-mail</u></label><br>
                 <input type="text" name="email">
         
-                <br>
-        
                 <label><u>Subject</u></label><br>
                 <input type="text" name="subject">
-                
-                <br>
         
                 <label><u>Message</u></label><br>
                 <textarea name="message"></textarea>
 
-                <br>
-
                 <label><u>Question</u></label><br>
-                <label>6 * 7 - (2 * 4) / 2</label>
-
-                <br>
+                <label>6 * 7 - (2 * 4) / 2</label><br>
                 
-                <input type="text" name="answer">
-
-                <br><br><br>
+                <input type="text" name="answer"><br>
         
                 <button type="submit" name="submit" class="button">Submit</button>
-
-                <br>
             </form>
 
             <?php if(isset($_SESSION['inputsHaveContent'])): ?>
