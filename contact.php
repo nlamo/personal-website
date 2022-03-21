@@ -115,7 +115,7 @@
 
                 <br>
 
-                <label><u>Question:</u></label><br>
+                <label><u>Question</u></label><br>
                 <label>6 * 7 - (2 * 4) / 2</label>
 
                 <br>
