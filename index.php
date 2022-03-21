@@ -29,20 +29,17 @@
                     <img src="img/logo.png"alt="">
                 </a>
 
-                <!-- For regular display (see: styles.css) -->
                 <div class="job-title">
                     web development
                 </div>
             </div>
 
-            <!-- Only for smartphone queries (see: media-queries.css) -->
             <div class="smartphone-job-title">
                 web development
             </div>
 
             <div class="nav-list">
                 <ul>
-                    <!-- <li><a href="portfolio.php">portfolio</a></li> -->
                     <li><a href="about.php">about</a></li>
                     <li><a href="contact.php">contact</a></li>
                 </ul>

@@ -1,7 +1,6 @@
 <?php
 
     // Using post/redirect/get pattern, but there are still some kinks to work out
-
     session_start();
 
     if (filter_has_var(INPUT_POST, 'submit')) 
@@ -75,20 +74,17 @@
                     <img src="img/logo.png"alt="">
                 </a>
 
-                <!-- For regular display (see: styles.css) -->
                 <div class="job-title">
                     web development
                 </div>
             </div>
 
-            <!-- Only for smartphone queries (see: media-queries.css) -->
             <div class="smartphone-job-title">
                 web development
             </div>
 
             <div class="nav-list">
                 <ul>
-                    <!-- <li><a href="portfolio.php">portfolio</a></li> -->
                     <li><a href="about.php">about</a></li>
                     <li><a href="contact.php" style="color:#FFF;">contact</a></li>
                 </ul>
@@ -121,7 +117,6 @@
                 <br>
             </form>
 
-            <!-- Session variables will determine the UI message outputs here -->
             <?php if(isset($_SESSION['inputsHaveContent'])): ?>
 
                 <?php if($_SESSION['inputsHaveContent'] == false): ?>
