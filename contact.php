@@ -1,53 +1,56 @@
 <?php
-
     // Using post/redirect/get pattern, but there are still some kinks to work out
     session_start();
 
-    if (filter_has_var(INPUT_POST, 'submit')) 
-    {
+    if (filter_has_var(INPUT_POST, 'submit')) {
+
         // NOTE: for use in the PHP statements *within* the HTML code, after redirects
         $inputsHaveContent = false;
         $emailIsValid = false;
+        $answerIsValid = false;
 
         $email = htmlspecialchars($_POST['email']);
         $subject = htmlspecialchars($_POST['subject']);
         $message = htmlspecialchars($_POST['message']);
+        $answer = htmlspecialchars($_POST['answer']);
 
         $_SESSION['email'] = $email;
         $_SESSION['subject'] = $subject;
         $_SESSION['message'] = $message;
+        $_SESSION['answer'] = $answer;
 
-        if ( empty($email) || empty($subject) || empty($message) )
-        {
+        // If any fields are empty, redirect and display appropriate message; else, more validation (e-mail validity, math question) for e-mail send
+        if (empty($email) || empty($subject) || empty($message) || empty($answer)) {
             $_SESSION['inputsHaveContent'] = $inputsHaveContent;  
-            
-            // Redirect, then session variable will trigger alert-message UI element
             header("Location: contact.php");
         }
-        else
-        {
+        else {
             $inputsHaveContent = true;
             $_SESSION['inputsHaveContent'] = $inputsHaveContent;      
 
             $senderEmail = "Sent from " . $email . " :\n\n";
 
-            // If e-mail is invalid, will redirect without calling mail()
-            if ( (filter_var($email, FILTER_VALIDATE_EMAIL)) == false )
-            {
+            if (filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
                 $_SESSION['emailIsValid'] = $emailIsValid;
                 header("Location: contact.php");
             }
-            else 
-            {
+            else if ($answer != 38) {
                 $emailIsValid = true;
                 $_SESSION['emailIsValid'] = $emailIsValid;
+                $_SESSION['answerIsValid'] = $answerIsValid;
+                header("Location: contact.php");
+            }
+            else {
+                $emailIsValid = true;
+                $answerIsValid = true;
+                $_SESSION['emailIsValid'] = $emailIsValid;
+                $_SESSION['answerIsValid'] = $answerIsValid;
     
                 $to = "lamothe.dev@gmail.com";
              // $subject = already defined
                 $body = $senderEmail . $message;
                 mail($to, $subject, $body);
     
-                // Redirect, then session variable will trigger success-message UI element
                 header("Location: contact.php");
             }   
         }
@@ -104,13 +107,22 @@
         
                 <label><u>Subject</u></label><br>
                 <input type="text" name="subject">
-        
+                
                 <br>
         
                 <label><u>Message</u></label><br>
                 <textarea name="message"></textarea>
 
-                <br><br>
+                <br>
+
+                <label><u>Question:</u></label><br>
+                <label>6 * 7 - (2 * 4) / 2</label>
+
+                <br>
+                
+                <input type="text" name="answer">
+
+                <br><br><br>
         
                 <button type="submit" name="submit" class="button">Submit</button>
 
@@ -126,6 +138,10 @@
                 <?php elseif($_SESSION['emailIsValid'] == false): ?>   
 
                     <div class="alert-message">Please use a valid e-mail address.</div>
+
+                <?php elseif($_SESSION['answerIsValid'] == false): ?>
+
+                    <div class="alert-message">Break out the calculator?</div>
 
                 <?php else: ?>    
 

@@ -1,8 +1,7 @@
 <?php
     session_start();
 
-    if (isset($_SESSION['inputsHaveContent'])) 
-    {
+    if (isset($_SESSION['inputsHaveContent'])) {
         session_destroy();
     }
 ?>
