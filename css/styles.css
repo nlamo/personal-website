@@ -6,12 +6,12 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    font-family: 'Sen', sans-serif;
     margin: 0;
     padding: 0;
     background: #085078;
     background: -webkit-linear-gradient(to left, #83C2BC, #8DBDD6);
     background: linear-gradient(to left, #83C2BC, #8DBDD6);
+    font-family: 'Sen', sans-serif;
 }
 
 
@@ -219,14 +219,16 @@ section {
       transform: scale(1);
     }
 }
-  
+
+/**********************************/
 /* Portfolio/project grid section */
+/**********************************/
 
 .portfolio-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
 
 .portfolio-grid {
@@ -247,16 +249,17 @@ section {
     background:rgba(50, 92, 109, 0.7);
 }
 
-/* About section: contains a main grid of two (2), which itself contains
- * a sub-grid of four (4) in the left container, and an 'about-me' section on the right */
+/*****************/
+/* About section */
+/*****************/
 
 .about-container {
     display: grid;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
     overflow: hidden;
+    font-family: 'Comfortaa', cursive;
 }
 
 .about-grid {
@@ -270,7 +273,6 @@ section {
 }
 
 /* Using the same method as with the index page drawings */
-
 .portrait-container {
     display: grid;
     position: relative;
@@ -328,7 +330,10 @@ section {
     bottom: -120px;
     pointer-events: none;
 }
+
+/************************/
 /* Contact form section */
+/************************/
 
 .form-container {
     display: flex;
@@ -349,9 +354,9 @@ section {
     width: 100%;
     height: 3rem;
     align-self: center;
+    margin-bottom: 1rem;
     font-family: 'Sen', sans-serif;
     font-size: 1rem;
-    margin-bottom: 1rem;
 }
 
 .form-container label {
@@ -359,18 +364,18 @@ section {
 }
 
 .form-container input {
-    font-family: 'Montserrat', sans-serif;
     width: 100%;
     padding: .3rem;
     margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .form-container textarea {
-    font-family: 'Montserrat', sans-serif;
     width: 100%;
     height: 140px;
     padding: .3rem;
     margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /**********/

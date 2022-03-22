@@ -1,4 +1,7 @@
+/**************************************/
 /* Small-ish screens (desktop/laptop) */
+/**************************************/
+
 @media screen and (min-width: 1024px) and (max-width:1280px) {
 
     .speech-bubble { 
@@ -32,8 +35,10 @@
     }
 }
 
-
+/*******************************************/
 /* Smaller screens (desktop/laptop/tablet) */
+/*******************************************/
+
 @media screen and (min-width: 800px) and (max-width:1023px) {
 
     .speech-bubble { 
@@ -62,8 +67,10 @@
     }
 }
 
-
+/*********************************************************/
 /* Very small screens, but still larger than smartphones */
+/*********************************************************/
+
 @media screen and (min-width: 500px) and (max-width:799px) {
 
     .speech-bubble { 
@@ -129,8 +136,10 @@
 
 }
 
-
+/**************************/
 /* Large/small smartphones*/
+/**************************/
+
 @media screen and (min-width: 0px) and (max-width:499px) {
 
     body {
