@@ -316,6 +316,18 @@ section {
     line-height: 1.8;
 }
 
+#highlight-selection-container {
+    position: relative;
+    z-index: 0;
+}
+
+#highlight-selection {
+    position: absolute;
+    z-index: 1;
+    right: -70px;
+    bottom: -120px;
+    pointer-events: none;
+}
 /* Contact form section */
 
 .form-container {
