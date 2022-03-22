@@ -342,6 +342,10 @@ section {
     margin-bottom: 1rem;
 }
 
+.form-container label {
+    margin-bottom: 1rem;
+}
+
 .form-container input {
     font-family: 'Montserrat', sans-serif;
     width: 100%;

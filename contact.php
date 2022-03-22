@@ -2,9 +2,27 @@
     // Using post/redirect/get pattern, but there are still some kinks to work out
     session_start();
 
+    // Associative array of equations and answers
+    $equations = array(
+        "6 * 7 - (2 * 4) / 2" => 38,
+        "(4 * 5) / 2 * 6 / 2" => 30,
+        "(18 + 3) / 3 * (4 * 3)" => 84,
+        "(20 + 13) / 3 + 43" => 54,
+        "(49 / 7) - 7 + 43" => 43
+    );
+
+    // Gets a random equation from an array of equations
+    function getRandomEquation($equations) {
+
+        return array_rand($equations, 1);
+    }
+
+    $randomEquation = getRandomEquation($equations);
+
+    // ------------------------------------------------------------------------------------------------
+
     if (filter_has_var(INPUT_POST, 'submit')) {
 
-        // NOTE: for use in the PHP statements *within* the HTML code, after redirects
         $inputsHaveContent = false;
         $emailIsValid = false;
         $answerIsValid = false;
@@ -12,12 +30,15 @@
         $email = htmlspecialchars($_POST['email']);
         $subject = htmlspecialchars($_POST['subject']);
         $message = htmlspecialchars($_POST['message']);
+        $randomEq = htmlspecialchars($_POST['random-equation']);
         $answer = htmlspecialchars($_POST['answer']);
 
         $_SESSION['email'] = $email;
         $_SESSION['subject'] = $subject;
         $_SESSION['message'] = $message;
-        $_SESSION['answer'] = $answer;
+
+        // Get array key from the random equation
+        $actualAnswer = $equations[$randomEq];
 
         // If any fields are empty, redirect and display appropriate message; else, more validation (e-mail validity, math question) for e-mail send
         if (empty($email) || empty($subject) || empty($message) || empty($answer)) {
@@ -34,7 +55,7 @@
                 $_SESSION['emailIsValid'] = $emailIsValid;
                 header("Location: contact.php");
             }
-            else if ($answer != 38) {
+            else if ($answer != $actualAnswer) {
                 $emailIsValid = true;
                 $_SESSION['emailIsValid'] = $emailIsValid;
                 $_SESSION['answerIsValid'] = $answerIsValid;
@@ -100,34 +121,39 @@
             <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <p><b>Got a question, consideration, or curiosity? Feel free to reach out. </b></p><br>
     
-                <label><u>E-mail</u></label><br>
+                <label><u>E-mail</u></label>
                 <input type="text" name="email">
         
-                <label><u>Subject</u></label><br>
+                <label><u>Subject</u></label>
                 <input type="text" name="subject">
         
-                <label><u>Message</u></label><br>
+                <label><u>Message</u></label>
                 <textarea name="message"></textarea>
 
-                <label><u>Question</u></label><br>
-                <label>6 * 7 - (2 * 4) / 2</label><br>
+                <label><u>Question</u></label>
+                <input type="hidden" name="random-equation" value="<?php echo $randomEquation; ?>">
+                <label>
+                    <span style="font-size: .9rem;">
+                        <?php echo $randomEquation; ?>
+                    </span>
+                </label>
                 
                 <input type="text" name="answer"><br>
         
                 <button type="submit" name="submit" class="button">Submit</button>
             </form>
 
-            <?php if(isset($_SESSION['inputsHaveContent'])): ?>
+            <?php if (isset($_SESSION['inputsHaveContent'])): ?>
 
-                <?php if($_SESSION['inputsHaveContent'] == false): ?>
+                <?php if ($_SESSION['inputsHaveContent'] == false): ?>
 
                     <div class="alert-message">Please enter information within all fields.</div>
                     
-                <?php elseif($_SESSION['emailIsValid'] == false): ?>   
+                <?php elseif ($_SESSION['emailIsValid'] == false): ?>   
 
                     <div class="alert-message">Please use a valid e-mail address.</div>
 
-                <?php elseif($_SESSION['answerIsValid'] == false): ?>
+                <?php elseif ($_SESSION['answerIsValid'] == false): ?>
 
                     <div class="alert-message">Break out the calculator?</div>
 
