@@ -1,5 +1,4 @@
 <?php
-    // Using post/redirect/get pattern, but there are still some kinks to work out
     session_start();
 
     // Associative array of equations and answers
@@ -38,7 +37,7 @@
         $_SESSION['message'] = $message;
 
         // Get array key from the random equation
-        $actualAnswer = $equations[$randomEq];
+        $correctAnswer = $equations[$randomEq];
 
         // If any fields are empty, redirect and display appropriate message; else, more validation (e-mail validity, math question) for e-mail send
         if (empty($email) || empty($subject) || empty($message) || empty($answer)) {
@@ -55,7 +54,7 @@
                 $_SESSION['emailIsValid'] = $emailIsValid;
                 header("Location: contact.php");
             }
-            else if ($answer != $actualAnswer) {
+            else if ($answer != $correctAnswer) {
                 $emailIsValid = true;
                 $_SESSION['emailIsValid'] = $emailIsValid;
                 $_SESSION['answerIsValid'] = $answerIsValid;
