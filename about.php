@@ -60,11 +60,11 @@
 
                   Eventually, I became enthralled by the study of philosophy and literature, with a special interest in philosophy of mind, ethics, and modernism, thus forming the basis of my undegraduate studies. Years later, by way of literary insight, I was compelled to start programming.<br></br>
 
-                  Recently, I've worked quite a bit with the LAMP stack and jQuery, but I'm in the process of learning Vue. I also love to cycle and illustrate, and I even like to try my hand at a few algorithms, here and there.<br><br>
+                  Recently, I've worked quite a bit with the LAMP stack and jQuery, but I've started learning React. I also love to cycle and illustrate, and I even like to try my hand at a few algorithms, here and there..<br><br>
 
                   <span id="highlight-selection-container">
                      You can find my resume <a href="cv/nicholas-lamothe-cv.pdf">here</a>.
-                     <img id="highlight-selection" src="/img/highlight-selection.png" alt="">
+                     <img id="highlight-selection" src="./img/highlight-selection.png" alt="">
                   </span>
                </p>
             </div>
