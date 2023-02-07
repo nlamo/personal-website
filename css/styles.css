@@ -9,8 +9,8 @@ body {
   margin: 0;
   padding: 0;
   background: #085078;
-  background: -webkit-linear-gradient(to left, #83c2bc, #8dbdd6);
-  background: linear-gradient(to left, #83c2bc, #8dbdd6);
+  background: -webkit-linear-gradient(to left, #9bb4cc, rgba(172, 212, 228, 0.8235294118));
+  background: linear-gradient(to left, #9bb4cc, rgba(172, 212, 228, 0.8235294118));
   font-family: "Sen", sans-serif;
 }
 
@@ -24,29 +24,10 @@ body {
   margin: 30px 40px 30px 40px;
 }
 
-.logo {
+.name {
   display: flex;
   flex-direction: row;
-}
-
-/* Left side of navigation bar */
-.logo img {
-  width: 45px;
-  height: 45px;
-}
-
-.job-title {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 60px;
-  font-size: 1.4rem;
-  color: #005c73;
-}
-
-.smartphone-job-title {
-  display: none;
-  color: #005c73;
+  text-transform: full-width;
 }
 
 /* Right side of navigation bar */
@@ -188,8 +169,7 @@ section {
   left: 5px;
   border-style: solid;
   border-width: 15px;
-  border-color: #e4dada transparent transparent #e4dada;
-  /* huh ? */
+  border-color: #e4dada transparent transparent #e4dada; /* huh ? */
   transform: rotate(10deg);
 }
 
@@ -248,8 +228,7 @@ section {
   display: grid;
   width: 100vw;
   max-height: 100%;
-  grid-template-columns: 1fr 1fr 0.15fr;
-  /* the .15 is just for spacing the other elements */
+  grid-template-columns: 1fr 1fr 0.15fr; /* the .15 is just for spacing the other elements */
   grid-template-rows: 1fr;
   gap: 20px;
   padding: 1rem;
@@ -321,6 +300,24 @@ section {
   justify-content: center;
   margin: 2rem;
 }
+.form-container .opener {
+  margin-bottom: 2.5rem;
+}
+.form-container .form-inner {
+  display: flex;
+  flex-direction: row;
+}
+.form-container .form-inner .name {
+  flex-basis: 25%;
+  text-transform: full-width;
+}
+.form-container .form-inner .content {
+  flex-basis: 75%;
+}
+.form-container .form-inner .question span {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
 .form-container form {
   display: flex;
   justify-content: center;
@@ -328,13 +325,15 @@ section {
   width: 100%;
   font-size: 1rem;
 }
-.form-container button {
+.form-container .button-submit {
+  cursor: pointer;
   width: 100%;
   height: 3rem;
   align-self: center;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   font-family: "Sen", sans-serif;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 1.25rem;
 }
 .form-container label {
   margin-bottom: 1rem;
@@ -366,8 +365,8 @@ section {
   align-items: center;
   overflow: auto;
   background: #085078;
-  background: -webkit-linear-gradient(to left, #83c2bc, #8dbdd6);
-  background: linear-gradient(to left, #83c2bc, #8dbdd6);
+  background: -webkit-linear-gradient(to left, #9bb4cc, rgba(172, 212, 228, 0.8235294118));
+  background: linear-gradient(to left, #9bb4cc, rgba(172, 212, 228, 0.8235294118));
 }
 .footer-container a {
   display: flex;
@@ -409,7 +408,7 @@ section {
 /***************/
 .loader {
   position: absolute;
-  border: 0px solid #f3f3f3;
+  border: 3px solid #f3f3f3;
   border-top: 10px solid #76a6c7;
   border-radius: 50%;
   width: 160px;
@@ -445,6 +444,223 @@ section {
   margin-bottom: 10px;
   background-color: #5bbc9e;
   color: #fff;
+}
+
+/**************************************/
+/* Small-ish screens (desktop/laptop) */
+/**************************************/
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .speech-bubble {
+    top: 27%;
+  }
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .portrait-container {
+    height: 90%;
+    width: 85%;
+  }
+  .portrait-container img {
+    align-content: center;
+    align-self: center;
+    width: 100%;
+  }
+  .about-me {
+    font-size: 0.9rem;
+    margin-right: 60px;
+  }
+  #highlight-selection {
+    max-width: 300px;
+    right: -40px;
+    bottom: -90px;
+  }
+}
+/*******************************************/
+/* Smaller screens (desktop/laptop/tablet) */
+/*******************************************/
+@media screen and (min-width: 800px) and (max-width: 1023px) {
+  .speech-bubble {
+    top: 19%;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .portrait-container {
+    margin-top: 40px;
+    margin-bottom: -40px;
+  }
+  .about-me {
+    font-size: 0.9rem;
+    margin: 30px 60px -20px 30px;
+  }
+  #highlight-selection {
+    max-width: 300px;
+    right: -45px;
+    bottom: -90px;
+  }
+}
+/*********************************************************/
+/* Very small screens, but still larger than smartphones */
+/*********************************************************/
+@media screen and (min-width: 500px) and (max-width: 799px) {
+  .speech-bubble {
+    font-size: 1rem;
+    width: 200px;
+    height: 125px;
+    top: 10%;
+  }
+  .navigation {
+    flex-direction: column;
+    margin: 40px 40px 15px 40px;
+  }
+  .job-title {
+    display: none;
+    align-items: center;
+  }
+  .smartphone-job-title {
+    display: flex;
+    margin: 10px 0px 25px 0px;
+  }
+  .portfolio-grid {
+    height: 1200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .portrait-container {
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+  .about-me {
+    font-size: 0.9rem;
+    margin: 0px 60px 30px 30px;
+  }
+  #highlight-selection {
+    max-width: 300px;
+    right: -45px;
+    bottom: -90px;
+  }
+  .form-container {
+    width: 70%;
+  }
+  .form-container .form-inner {
+    flex-direction: column;
+  }
+  .copyright-overlay {
+    font-size: 0.5rem;
+  }
+}
+/**************************/
+/* Large/small smartphones*/
+/**************************/
+@media screen and (min-width: 0px) and (max-width: 499px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+  .smartphone-index-section {
+    height: min-content;
+  }
+  .smartphone-about-section {
+    height: 1000px;
+  }
+  .smartphone-contact-section {
+    height: 700px;
+  }
+  .bottom-drawing {
+    display: none;
+  }
+  .bottom-drawing-smartphone {
+    display: grid;
+  }
+  .top-drawing {
+    display: none;
+  }
+  .top-drawing-smartphone {
+    display: grid;
+  }
+  .speech-bubble {
+    font-size: 0.6rem;
+    width: 100px;
+    height: 75px;
+    top: 30px;
+    left: 263px;
+  }
+  .navigation {
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 175px;
+    margin: 30px 0px 20px 0px;
+  }
+  .nav-list ul {
+    font-size: 0.9rem;
+  }
+  .job-title {
+    display: none;
+    align-items: center;
+  }
+  .smartphone-job-title {
+    display: flex;
+    margin: 0px 0px 0px 0px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+  }
+  .portrait-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 90px;
+    height: 90%;
+    width: 100%;
+  }
+  .portrait-container img {
+    width: 75%;
+  }
+  .about-me {
+    font-size: 0.8rem;
+    margin: 0px 30px 50px 30px;
+  }
+  #highlight-selection {
+    max-width: 300px;
+    right: -55px;
+    bottom: -90px;
+  }
+  .form-container p {
+    font-size: 0.8rem;
+  }
+  .form-container label {
+    font-size: 0.8rem;
+  }
+  .form-container button {
+    font-size: 0.8rem;
+  }
+  .footer-container {
+    flex-shrink: 1;
+    margin-bottom: 50px;
+  }
+  .footer-container a img {
+    width: 25%;
+    height: 40%;
+  }
+  .copyright-overlay {
+    font-size: 0.5rem;
+    right: 20px;
+  }
+  .loader {
+    width: 80px;
+    height: 80px;
+  }
+  .alert-message {
+    font-size: 0.8rem;
+  }
+  .success-message {
+    font-size: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

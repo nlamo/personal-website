@@ -20,7 +20,6 @@ function showLandscapeScene() {
       hideLoadingSpinner();
 
       landscapeDrawings.style.visibility = "visible";
-      speechBubble.style.visibility = "visible";
       bottomDrawing.style.visibility = "visible";
       bottomDrawingSmartphone.style.visibility = "visible";
       topDrawing.style.visibility = "visible";

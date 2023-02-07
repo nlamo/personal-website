@@ -16,27 +16,17 @@
    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/styles.css">
-   <link rel="stylesheet" href="css/media-queries.css">
    <title>Nicholas LaMothe - Portfolio Website</title>
 </head>
 
 <body>
    <header>
       <nav class="navigation">
-         <div class="logo">
+         <div class="name">
             <a href="index.php">
-               <img src="img/logo.png" alt="">
+               nicholas lamothe
             </a>
-
-            <div class="job-title">
-               web development
-            </div>
          </div>
-
-         <div class="smartphone-job-title">
-            web development
-         </div>
-
          <div class="nav-list">
             <ul>
                <li><a href="about.php">about</a></li>
@@ -50,14 +40,11 @@
       <div class="loader" id="loader"></div>
 
       <div class="landscape-drawings-container" id="landscape-drawings-container">
-
          <img class="bottom-drawing" id="bottom-drawing" src="img/landscape_coloured_wide.jpg" alt="">
          <img class="bottom-drawing-smartphone" id="bottom-drawing-smartphone" src="img/landscape_outline_coloured_smartphone.jpg" alt="">
 
          <img class="top-drawing" id="top-drawing" src="img/landscape_outline_wide.jpg" alt="">
          <img class="top-drawing-smartphone" id="top-drawing-smartphone" src="img/landscape_outline_smartphone.jpg" alt="">
-
-         <div class="speech-bubble" id="speech-bubble">Greetings! I'm Nick. Welcome to my website. </div>
       </div>
    </section>
 

@@ -16,27 +16,17 @@
    <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/styles.css">
-   <link rel="stylesheet" href="css/media-queries.css">
    <title>Nicholas LaMothe - Portfolio Website</title>
 </head>
 
 <body>
    <header>
       <nav class="navigation">
-         <div class="logo">
+         <div class="name">
             <a href="index.php">
-               <img src="img/logo.png" alt="">
+               nicholas lamothe
             </a>
-
-            <div class="job-title">
-               web development
-            </div>
          </div>
-
-         <div class="smartphone-job-title">
-            web development
-         </div>
-
          <div class="nav-list">
             <ul>
                <li><a href="portfolio.php" style="color:#FFF;">portfolio</a></li>

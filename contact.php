@@ -1,84 +1,7 @@
 <?php
    session_start();
 
-   // Associative array of questions and answers
-   $questions = array(
-      "Who was Emperor of the French in the year of 1810?" => "Napolean Bonaparte",
-      "Which of these languages is the most high-level: Python, C, or PHP?" => "Python",
-      "Name the prime minister of Canada in the year 1992." => "Brian Mulroney",
-      "Name the author of the novel 'To the Lighthouse'." => "Virginia Woolf",
-      "What is the hardest substance on earth?" => "Diamond"
-   );
-
-   // Gets a random question from an array of questions
-   function getRandomQuestion($questions) {
-
-      return array_rand($questions, 1);
-   }
-
-   $randomQuestion = getRandomQuestion($questions);
-
-   // ------------------------------------------------------------------------------------------------
-
-   if (filter_has_var(INPUT_POST, 'submit')) {
-
-      $inputsHaveContent = false;
-      $emailIsValid = false;
-      $answerIsValid = false;
-
-      $email = htmlspecialchars($_POST['email']);
-      $subject = htmlspecialchars($_POST['subject']);
-      $message = htmlspecialchars($_POST['message']);
-      $question = htmlspecialchars($_POST['random-question']);
-      $answer = htmlspecialchars($_POST['answer']);
-
-      $_SESSION['email'] = $email;
-      $_SESSION['subject'] = $subject;
-      $_SESSION['message'] = $message;
-
-      // Get array key (answer) from the random question
-      $correctAnswer = $questions[$question];
-
-      // Make correctAnswer and user answer lowercase to remove case sensitivity
-      $answer = strtolower($answer);
-      $correctAnswer = strtolower($correctAnswer);
-
-      // If any fields are empty, redirect and display appropriate message; else, more validation (e-mail validity, math question) for e-mail send
-      if (empty($email) || empty($subject) || empty($message) || empty($answer)) {
-         $_SESSION['inputsHaveContent'] = $inputsHaveContent;
-         header("Location: contact.php");
-      } 
-      else {
-         $inputsHaveContent = true;
-         $_SESSION['inputsHaveContent'] = $inputsHaveContent;
-
-         $senderEmail = "Sent from " . $email . " :\n\n";
-
-         if (filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
-            $_SESSION['emailIsValid'] = $emailIsValid;
-            header("Location: contact.php");
-         } 
-         else if ($answer != $correctAnswer) {
-            $emailIsValid = true;
-            $_SESSION['emailIsValid'] = $emailIsValid;
-            $_SESSION['answerIsValid'] = $answerIsValid;
-            header("Location: contact.php");
-         } 
-         else {
-            $emailIsValid = true;
-            $answerIsValid = true;
-            $_SESSION['emailIsValid'] = $emailIsValid;
-            $_SESSION['answerIsValid'] = $answerIsValid;
-
-            $to = "lamothe.dev@gmail.com";
-            // $subject = already defined
-            $body = $senderEmail . $message;
-            mail($to, $subject, $body);
-
-            header("Location: contact.php");
-         }
-      }
-   }
+   require "lib/form-contact.php";
 ?>
 
 <!DOCTYPE html>
@@ -92,27 +15,17 @@
    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/styles.css">
-   <link rel="stylesheet" href="css/media-queries.css">
    <title>Nicholas LaMothe - Portfolio Website</title>
 </head>
 
 <body>
    <header>
-      <nav class="navigation">
-         <div class="logo">
+      <nav class="navigation">   
+         <div class="name">
             <a href="index.php">
-               <img src="img/logo.png" alt="">
+               nicholas lamothe
             </a>
-
-            <div class="job-title">
-               web development
-            </div>
          </div>
-
-         <div class="smartphone-job-title">
-            web development
-         </div>
-
          <div class="nav-list">
             <ul>
                <li><a href="about.php">about</a></li>
@@ -125,28 +38,46 @@
    <section class="smartphone-contact-section">
       <div class="form-container">
          <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-            <p><b>Got a question, consideration, or curiosity? Feel free to reach out. </b></p><br>
+            <p class="opener"><b>Got a question, consideration, or curiosity? Feel free to reach out.</b></p><br>
 
-            <label><u>E-mail</u></label>
-            <input type="text" name="email">
+            <div class="form-inner email-container">
+               <label class="name"><u>e-mail</u></label>
+               <div class="content">
+                  <input type="text" name="email">
+               </div>
+            </div>
 
-            <label><u>Subject</u></label>
-            <input type="text" name="subject">
+            <div class="form-inner subject-container">
+               <label class="name"><u>subject</u></label>
+               <div class="content">
+                  <input type="text" name="subject">
+               </div>
+            </div>
 
-            <label><u>Message</u></label>
-            <textarea name="message"></textarea>
+            <div class="form-inner message-container">
+               <label class="name"><u>message</u></label>
+               <div class="content">
+                  <textarea name="message"></textarea>
+               </div>
+            </div>
 
-            <label><u>Question</u></label>
-            <input type="hidden" name="random-question" value="<?php echo $randomQuestion; ?>">
-            <label>
-               <span style="font-size: .9rem;">
-                  <?php echo $randomQuestion; ?>
-               </span>
-            </label>
 
-            <input type="text" name="answer"><br>
+            <div class="form-inner question-container">
+               <label class="name"><u>question</u></label>
+               <div class="content">
+                  <input type="hidden" name="random-question" value="<?php echo $randomQuestion; ?>">
 
-            <button type="submit" name="submit" class="button">Submit</button>
+                  <label class="question">
+                     <span style="font-size: .9rem;">
+                        <?php echo $randomQuestion; ?>
+                     </span>
+                  </label>
+
+                  <input type="text" name="answer"><br>
+               </div>
+            </div>
+
+            <button class="button-submit" type="submit" name="submit" class="button">submit</button>
          </form>
 
          <?php if (isset($_SESSION['inputsHaveContent'])) : ?>
