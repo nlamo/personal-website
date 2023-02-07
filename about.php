@@ -49,9 +49,11 @@
                <p>
                   My passion for technology started at an early age - from troubleshooting issues in MS-DOS with my father to using the terminal of a Commodore 64 for the first time in one of the school portables. This developed concurrently with an obsession with gaming, which sparked an interest in hardware and building desktop computers.<br></br>
 
-                  Eventually, I became enthralled by the study of philosophy and literature, with a special interest in philosophy of mind, ethics, and modernism, thus forming the basis of my undegraduate studies. Years later, by way of literary insight, I was compelled to start programming.<br></br>
+                  During my university years, I focused on philosophy and literature studies, with a special interest in philosophy of mind, ethics, and modernism. Years later, by way of literary insight, I was compelled to start programming.<br></br>
 
-                  Recently, I've worked quite a bit with the LAMP stack and jQuery, but I've started learning React. I also love to cycle and illustrate, and I even like to try my hand at a few algorithms, here and there..<br><br>
+                  Primarily, I work in the WordPress environment (LAMP), with a healthy balance of front-end (CSS/Sass/JQ/jQuery/React) and back end (PHP/MySQL).<br><br>
+                  
+                  Recreationally, I enjoy film, literature, illustration, music, gaming, cycling, and squash.<br><br>
 
                   <span id="highlight-selection-container">
                      You can find my resume <a href="cv/nicholas-lamothe-cv.pdf">here</a>.
