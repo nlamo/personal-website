@@ -124,6 +124,7 @@
 
       .form-inner {
          flex-direction: column;
+         gap: unset;
       }
    }
 
@@ -238,6 +239,11 @@
 
       button {
          font-size: 0.8rem;
+      }
+
+      .form-inner {
+         flex-direction: column;
+         gap: unset;
       }
    }
 

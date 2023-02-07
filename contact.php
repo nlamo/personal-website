@@ -71,9 +71,10 @@
                      <span style="font-size: .9rem;">
                         <?php echo $randomQuestion; ?>
                      </span>
+                     <input type="text" name="answer"><br>
                   </label>
 
-                  <input type="text" name="answer"><br>
+    
                </div>
             </div>
 
