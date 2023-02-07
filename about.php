@@ -49,7 +49,7 @@
                <p>
                   My passion for technology started at an early age - from troubleshooting issues in MS-DOS with my father to using the terminal of a Commodore 64 for the first time in one of the school portables. This developed concurrently with an obsession with gaming, which sparked an interest in hardware and building desktop computers.<br></br>
 
-                  During my university years, I focused on philosophy and literature studies, with a special interest in philosophy of mind, ethics, and modernism. Years later, by way of literary insight, I was compelled to start programming.<br></br>
+                  During my university years, I focused on studies in philosophy and literature, with a special interest in philosophy of mind, ethics, and modernism. Years later, by way of literary insight, I was compelled to start programming.<br></br>
 
                   Primarily, I work in the WordPress environment (LAMP), with a healthy balance of front-end (CSS/Sass/JQ/jQuery/React) and back end (PHP/MySQL).<br><br>
                   
