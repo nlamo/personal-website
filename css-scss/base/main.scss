@@ -347,10 +347,17 @@ section {
    margin: 2rem;
    min-width: 33vw;
 
+   form {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 1rem;
+   }
+   
    .opener {
       margin-bottom: 2.5rem;
    }
-
+   
    .form-inner {
       display: flex;
       flex-direction: row;
@@ -383,12 +390,6 @@ section {
       }
    }
 
-   form {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      font-size: 1rem;
-   }
 
    .button-submit {
       cursor: pointer;

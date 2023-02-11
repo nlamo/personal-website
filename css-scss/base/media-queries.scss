@@ -105,11 +105,16 @@
    }
 
    .form-container {
+      margin: 5rem 2rem;
       width: 70%;
 
       .form-inner {
          flex-direction: column;
          gap: unset;
+      }
+      
+      .opener {
+         margin: 0 0 3rem 0;
       }
    }
 
@@ -206,6 +211,11 @@
    }
 
    .form-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 2.5rem 2rem 5rem 2rem;
+
       p {
          font-size: 0.8rem;
       }
@@ -221,6 +231,10 @@
       .form-inner {
          flex-direction: column;
          gap: unset;
+      }
+
+      .opener {
+         margin: 4rem 0 1rem 0;
       }
    }
 

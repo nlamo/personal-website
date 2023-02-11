@@ -303,6 +303,12 @@ section {
   margin: 2rem;
   min-width: 33vw;
 }
+.form-container form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1rem;
+}
 .form-container .opener {
   margin-bottom: 2.5rem;
 }
@@ -331,12 +337,6 @@ section {
   display: block;
   height: max-content;
   margin-bottom: 1rem;
-}
-.form-container form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 1rem;
 }
 .form-container .button-submit {
   cursor: pointer;
@@ -545,11 +545,15 @@ section {
     bottom: -90px;
   }
   .form-container {
+    margin: 5rem 2rem;
     width: 70%;
   }
   .form-container .form-inner {
     flex-direction: column;
     gap: unset;
+  }
+  .form-container .opener {
+    margin: 0 0 3rem 0;
   }
   .copyright-overlay {
     font-size: 0.5rem;
@@ -624,6 +628,12 @@ section {
     right: -55px;
     bottom: -90px;
   }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2.5rem 2rem 5rem 2rem;
+  }
   .form-container p {
     font-size: 0.8rem;
   }
@@ -636,6 +646,9 @@ section {
   .form-container .form-inner {
     flex-direction: column;
     gap: unset;
+  }
+  .form-container .opener {
+    margin: 4rem 0 1rem 0;
   }
   .footer-container {
     flex-shrink: 1;
