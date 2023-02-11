@@ -68,7 +68,7 @@
                   <input type="hidden" name="random-question" value="<?php echo $randomQuestion; ?>">
 
                   <label class="question">
-                     <span style="font-size: .9rem;">
+                     <span class="question-inner">
                         <?php echo $randomQuestion; ?>
                      </span>
                      <input type="text" name="answer"><br>
