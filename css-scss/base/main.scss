@@ -43,12 +43,12 @@ body {
    justify-content: space-between;
    align-items: center;
    margin: 30px 40px 30px 40px;
-}
 
-.name {
-   display: flex;
-   flex-direction: row;
-   text-transform: full-width;
+   .name {
+      display: flex;
+      flex-direction: row;
+      letter-spacing: 0.5rem;
+   }
 }
 
 /* Right side of navigation bar */
@@ -355,7 +355,7 @@ section {
       .name {
          flex-basis: 25%;
          flex-shrink: 0;
-         text-transform: full-width;
+         letter-spacing: 0.5rem;
       }
 
       .content {
