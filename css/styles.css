@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -315,6 +319,10 @@ section {
 .form-container .form-inner .content {
   flex: 1 1 100%;
 }
+.form-container .form-inner .content input,
+.form-container .form-inner .content textarea {
+  font-size: 0.8rem;
+}
 .form-container .form-inner .question {
   display: block;
 }
@@ -454,9 +462,6 @@ section {
 /* Small-ish screens (desktop/laptop) */
 /**************************************/
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
-  .speech-bubble {
-    top: 27%;
-  }
   .about-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -483,9 +488,6 @@ section {
 /* Smaller screens (desktop/laptop/tablet) */
 /*******************************************/
 @media screen and (min-width: 800px) and (max-width: 1023px) {
-  .speech-bubble {
-    top: 19%;
-  }
   .about-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -508,12 +510,6 @@ section {
 /* Very small screens, but still larger than smartphones */
 /*********************************************************/
 @media screen and (min-width: 500px) and (max-width: 799px) {
-  .speech-bubble {
-    font-size: 1rem;
-    width: 200px;
-    height: 125px;
-    top: 10%;
-  }
   .navigation {
     flex-direction: column;
     margin: 40px 40px 15px 40px;
@@ -587,13 +583,6 @@ section {
   }
   .top-drawing-smartphone {
     display: grid;
-  }
-  .speech-bubble {
-    font-size: 0.6rem;
-    width: 100px;
-    height: 75px;
-    top: 30px;
-    left: 263px;
   }
   .navigation {
     justify-content: space-evenly;
