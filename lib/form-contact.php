@@ -6,7 +6,9 @@
       "Which of these languages is the most high-level: Python, C, or PHP?" => "Python",
       "Name the prime minister of Canada in the year 1992." => "Brian Mulroney",
       "Name the author of the novel 'To the Lighthouse'." => "Virginia Woolf",
-      "What is the hardest substance on earth?" => "Diamond"
+      "What is the hardest substance on earth?" => "Diamond",
+      "Please name the subfamily of the arbutus tree." => "Arbutoideae",
+      "Which city in Washington state shares its name with another in British Columbia?" => "Vancouver"
    );
 
    // Gets a random question from an array of questions
@@ -72,7 +74,7 @@
             $to = "lamothe.dev@gmail.com";
             // $subject = already defined
             $body = $senderEmail . $message;
-            
+
             mail($to, $subject, $body);
 
             header("Location: contact.php");
