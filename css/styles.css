@@ -22,11 +22,10 @@ body {
   align-items: center;
   margin: 30px 40px 30px 40px;
 }
-
-.name {
+.navigation .name {
   display: flex;
   flex-direction: row;
-  text-transform: full-width;
+  letter-spacing: 0.5rem;
 }
 
 /* Right side of navigation bar */
@@ -311,7 +310,7 @@ section {
 .form-container .form-inner .name {
   flex-basis: 25%;
   flex-shrink: 0;
-  text-transform: full-width;
+  letter-spacing: 0.5rem;
 }
 .form-container .form-inner .content {
   flex: 1 1 100%;

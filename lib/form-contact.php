@@ -72,9 +72,8 @@
             $to = "lamothe.dev@gmail.com";
             // $subject = already defined
             $body = $senderEmail . $message;
-
-            // NOTE: Commented out while testing on localhost (no mail server)
-            // mail($to, $subject, $body);
+            
+            mail($to, $subject, $body);
 
             header("Location: contact.php");
          }
