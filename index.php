@@ -22,7 +22,7 @@
 <body>
    <header>
       <nav class="navigation">
-         <div class="name">
+         <div class="header-name">
             <a href="index.php">
                nicholas lamothe
             </a>
@@ -37,7 +37,14 @@
    </header>
 
    <section class="smartphone-index-section">
-      <div class="loader" id="loader"></div>
+      <div class="loader-container">
+         <div class="loader" id="loader">
+            <div class="loader-inner"></div>
+            <div class="loader-inner"></div>
+            <div class="loader-inner"></div>
+            <div class="loader-inner"></div>
+         </div>
+      </div>
 
       <div class="landscape-drawings-container" id="landscape-drawings-container">
          <img class="bottom-drawing" id="bottom-drawing" src="img/landscape_coloured_wide.jpg" alt="">
@@ -63,6 +70,7 @@
       </div>
    </footer>
 
+   <script src="js/general.js" defer></script>
    <script src="js/loader.js" defer></script>
    <script src="js/time.js" defer></script>
 </body>

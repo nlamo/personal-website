@@ -12,8 +12,8 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: -webkit-linear-gradient(to left, #9bb4cc, #acd4e4);
-  background: linear-gradient(to left, #9bb4cc, #acd4e4);
+  background: -webkit-linear-gradient(to left, #9bb4cc, #789aa8);
+  background: linear-gradient(to left, #9bb4cc, #789aa8);
   font-family: "Sen", sans-serif;
 }
 
@@ -26,10 +26,21 @@ body {
   align-items: center;
   margin: 30px 40px 30px 40px;
 }
-.navigation .name {
+.navigation .header-name {
   display: flex;
   flex-direction: row;
   letter-spacing: 0.5rem;
+}
+.navigation .header-name:active, .navigation .header-name:focus {
+  color: #f3f3f3;
+}
+.navigation .header-name.hovered a {
+  color: #f3f3f3;
+}
+.navigation .header-name a {
+  color: #324b4d;
+  text-decoration: none;
+  font-size: 1.25rem;
 }
 
 /* Right side of navigation bar */
@@ -136,56 +147,6 @@ section {
     opacity: 0;
   }
 }
-/* Attribution: Khaled Ahmed Younes, https://codepen.io/KhaledAhmedYounes/pen/xXqYGY */
-/*              Modified to suit my needs. Very much appreciated! */
-.speech-bubble {
-  visibility: hidden;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  position: absolute;
-  font-family: "Roboto Slab", serif;
-  font-size: 1.5rem;
-  transform-origin: 0% 100%;
-  background-color: #e4dada;
-  opacity: 0.9;
-  color: #000;
-  border-radius: 15px;
-  width: 325px;
-  height: 150px;
-  padding: 15px;
-  left: 56%;
-  top: 42%;
-  transform: scale(0);
-  animation-name: expand-bounce;
-  animation-fill-mode: forwards;
-  animation-duration: 0.6s;
-  animation-delay: 2.5s;
-}
-.speech-bubble::before {
-  content: "";
-  display: block;
-  width: 0;
-  position: absolute;
-  bottom: -25px;
-  left: 5px;
-  border-style: solid;
-  border-width: 15px;
-  border-color: #e4dada transparent transparent #e4dada; /* huh ? */
-  transform: rotate(10deg);
-}
-
-@keyframes expand-bounce {
-  0% {
-    transform: scale(0);
-  }
-  75% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 /**********************************/
 /* Portfolio/project grid section */
 /**********************************/
@@ -230,7 +191,8 @@ section {
   display: grid;
   width: 100vw;
   max-height: 100%;
-  grid-template-columns: 1fr 1fr 0.15fr; /* the .15 is just for spacing the other elements */
+  grid-template-columns: 1fr 1fr 0.15fr;
+  /* the .15 is just for spacing the other elements */
   grid-template-rows: 1fr;
   gap: 20px;
   padding: 1rem;
@@ -377,8 +339,8 @@ section {
   justify-content: center;
   align-items: center;
   overflow: auto;
-  background: -webkit-linear-gradient(to left, #9bb4cc, #acd4e4);
-  background: linear-gradient(to left, #9bb4cc, #acd4e4);
+  background: -webkit-linear-gradient(to left, #9bb4cc, #789aa8);
+  background: linear-gradient(to left, #9bb4cc, #789aa8);
 }
 .footer-container a {
   display: flex;
@@ -418,22 +380,62 @@ section {
 /***************/
 /** UTILITIES **/
 /***************/
-.loader {
+.loader-container {
   position: absolute;
-  border: 3px solid #f3f3f3;
-  border-top: 10px solid #76a6c7;
-  border-radius: 50%;
-  width: 160px;
-  height: 160px;
-  animation: spin 1.7s linear infinite;
+  width: 350px;
+  height: 350px;
 }
 
-@keyframes spin {
+.loader {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.loader div {
+  position: absolute;
+  border: 3px solid #64859b;
+  opacity: 0.6;
+  border-radius: 50%;
+  animation: loader-ripple 2s cubic-bezier(0, 0.2, 0.8, 0.5) infinite;
+}
+.loader div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+.loader div:nth-child(3) {
+  animation-delay: -1s;
+}
+.loader div:nth-child(4) {
+  animation-delay: -1.5s;
+}
+
+@keyframes loader-ripple {
   0% {
-    transform: rotate(0deg);
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    opacity: 1;
   }
   100% {
-    transform: rotate(360deg);
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
   }
 }
 .alert-message {
@@ -662,9 +664,9 @@ section {
     font-size: 0.5rem;
     right: 20px;
   }
-  .loader {
-    width: 80px;
-    height: 80px;
+  .loader-container {
+    width: 250px;
+    height: 250px;
   }
   .alert-message {
     font-size: 0.8rem;

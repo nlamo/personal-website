@@ -1,16 +1,16 @@
 $right-gradient: #9bb4cc;
-$left-gradient: #acd4e4;
-
-$speech-bubble-grey: #e4dada;
+$left-gradient: #789aa8;
 
 $darker-blue-primary: #005c73;
 $darker-blue-secondary: #325c73;
 $darker-blue-tertiary: #324b4d;
 
+$hover: #f3f3f3;
+
 $alert-red: #922704;
 $alert-green: #5bbc9e;
 $loader-grey: #f3f3f3;
-$loader-blue: #76a6c7;
+$loader-blue: #64859b;
 
 $white: #fff;
 $black: #000;
@@ -29,11 +29,9 @@ body {
    height: 100vh;
    margin: 0;
    padding: 0;
-   background: -webkit-linear-gradient(
-      to left,
-      $right-gradient,
-      $left-gradient
-   );
+   background: -webkit-linear-gradient(to left,
+         $right-gradient,
+         $left-gradient );
    background: linear-gradient(to left, $right-gradient, $left-gradient);
    font-family: "Sen", sans-serif;
 }
@@ -48,10 +46,27 @@ body {
    align-items: center;
    margin: 30px 40px 30px 40px;
 
-   .name {
+   .header-name {
       display: flex;
       flex-direction: row;
       letter-spacing: 0.5rem;
+      
+      &:active,
+      &:focus {
+         color: $hover;
+      }
+
+      &.hovered {
+         a {
+            color: $hover;
+         }
+      }
+
+      a {
+         color: $darker-blue-tertiary;
+         text-decoration: none;
+         font-size: 1.25rem;
+      }
    }
 }
 
@@ -160,68 +175,17 @@ section {
    0% {
       opacity: 1;
    }
+
    25% {
       opacity: 1;
    }
+
    75% {
       opacity: 0;
    }
+
    100% {
       opacity: 0;
-   }
-}
-
-/* Attribution: Khaled Ahmed Younes, https://codepen.io/KhaledAhmedYounes/pen/xXqYGY */
-/*              Modified to suit my needs. Very much appreciated! */
-
-.speech-bubble {
-   visibility: hidden;
-   display: flex;
-   text-align: center;
-   align-items: center;
-   position: absolute;
-   font-family: "Roboto Slab", serif;
-   font-size: 1.5rem;
-   transform-origin: 0% 100%;
-   background-color: $speech-bubble-grey;
-   opacity: 0.9;
-   color: $black;
-   border-radius: 15px;
-   width: 325px;
-   height: 150px;
-   padding: 15px;
-   left: 56%;
-   top: 42%;
-   transform: scale(0);
-
-   animation-name: expand-bounce;
-   animation-fill-mode: forwards;
-   animation-duration: 0.6s;
-   animation-delay: 2.5s;
-
-   &::before {
-      content: "";
-      display: block;
-      width: 0;
-      position: absolute;
-      bottom: -25px;
-      left: 5px;
-      border-style: solid;
-      border-width: 15px;
-      border-color: $speech-bubble-grey transparent transparent $speech-bubble-grey; /* huh ? */
-      transform: rotate(10deg);
-   }
-}
-
-@keyframes expand-bounce {
-   0% {
-      transform: scale(0);
-   }
-   75% {
-      transform: scale(1.05);
-   }
-   100% {
-      transform: scale(1);
    }
 }
 
@@ -271,7 +235,8 @@ section {
    display: grid;
    width: 100vw;
    max-height: 100%;
-   grid-template-columns: 1fr 1fr 0.15fr; /* the .15 is just for spacing the other elements */
+   grid-template-columns: 1fr 1fr 0.15fr;
+   /* the .15 is just for spacing the other elements */
    grid-template-rows: 1fr;
    gap: 20px;
    padding: 1rem;
@@ -353,11 +318,11 @@ section {
       flex-direction: column;
       font-size: 1rem;
    }
-   
+
    .opener {
       margin-bottom: 2.5rem;
    }
-   
+
    .form-inner {
       display: flex;
       flex-direction: row;
@@ -371,7 +336,7 @@ section {
 
       .content {
          flex: 1 1 100%;
-         
+
          input,
          textarea {
             font-size: 0.8rem;
@@ -435,11 +400,9 @@ section {
    justify-content: center;
    align-items: center;
    overflow: auto;
-   background: -webkit-linear-gradient(
-      to left,
-      $right-gradient,
-      $left-gradient
-   );
+   background: -webkit-linear-gradient(to left,
+         $right-gradient,
+         $left-gradient );
    background: linear-gradient(to left, $right-gradient, $left-gradient);
 
    a {
@@ -487,22 +450,69 @@ section {
 /** UTILITIES **/
 /***************/
 
-.loader {
+.loader-container {
    position: absolute;
-   border: 3px solid $loader-grey;
-   border-top: 10px solid $loader-blue;
-   border-radius: 50%;
-   width: 160px;
-   height: 160px;
-   animation: spin 1.7s linear infinite;
+   width: 350px;
+   height: 350px;
 }
 
-@keyframes spin {
-   0% {
-      transform: rotate(0deg);
+.loader {
+   position: relative;
+   height: 100%;
+   width: 100%;
+
+   div {
+      position: absolute;
+      border: 3px solid $loader-blue;
+      opacity: 0.6;
+      border-radius: 50%;
+      animation: loader-ripple 2s cubic-bezier(0, 0.2, 0.8, 0.5) infinite;
+
+      &:nth-child(2) {
+         animation-delay: -0.5s;
+      }
+
+      &:nth-child(3) {
+         animation-delay: -1s;
+      }
+
+      &:nth-child(4) {
+         animation-delay: -1.5s;
+      }
    }
+}
+
+@keyframes loader-ripple {
+   0% {
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      opacity: 0;
+   }
+
+   4.9% {
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      opacity: 0;
+   }
+
+   5% {
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      opacity: 1;
+   }
+
    100% {
-      transform: rotate(360deg);
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
    }
 }
 

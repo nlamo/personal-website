@@ -21,7 +21,7 @@
 <body>
    <header>
       <nav class="navigation">   
-         <div class="name">
+         <div class="header-name">
             <a href="index.php">
                nicholas lamothe
             </a>
@@ -120,6 +120,7 @@
       </div>
    </footer>
 
+   <script src="js/general.js" defer></script>
    <script src="js/time.js" defer></script>
 </body>
 
