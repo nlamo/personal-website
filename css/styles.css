@@ -256,6 +256,9 @@ section {
   position: relative;
   z-index: 0;
 }
+#highlight-selection-container a {
+  color: #64859b;
+}
 
 #highlight-selection {
   position: absolute;
@@ -687,8 +690,8 @@ section {
     right: 20px;
   }
   .loader-container {
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
   }
   .alert-message {
     font-size: 0.8rem;

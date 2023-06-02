@@ -44,7 +44,7 @@
                   
                   Recreationally, I enjoy film, literature, illustration, music, gaming, and cycling.<br><br>
 
-                  <spvan id="highlight-selection-container">
+                  <span id="highlight-selection-container">
                      You can find my resume <a href="resume/nicholas-lamothe-resume.pdf">here</a>.
                      <img id="highlight-selection" src="./img/highlight-selection.png" alt="">
                   </span>

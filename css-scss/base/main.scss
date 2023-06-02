@@ -14,6 +14,8 @@ $loader-blue: #64859b;
 
 $white: #fff;
 $black: #000;
+$orange: #ffac1c;
+$coral: #ff7f50;
 
 * {
    box-sizing: border-box;
@@ -304,6 +306,10 @@ section {
 #highlight-selection-container {
    position: relative;
    z-index: 0;
+
+   a {
+      color: $loader-blue;
+   }
 }
 
 #highlight-selection {
