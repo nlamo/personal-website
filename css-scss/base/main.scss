@@ -49,7 +49,8 @@ body {
    .header-name {
       display: flex;
       flex-direction: row;
-      letter-spacing: 0.5rem;
+      letter-spacing: 0.25rem;
+      font-weight: 900;
       
       &:active,
       &:focus {
@@ -90,6 +91,18 @@ body {
             color: rgba($white, 0.637);
          }
       }
+   }
+
+   .current-item {
+      color: $white;
+
+      &:hover {
+         color: $white;
+      }
+   }
+
+   .item {
+      color: #324b4d;
    }
 }
 
@@ -326,12 +339,13 @@ section {
    .form-inner {
       display: flex;
       flex-direction: row;
-      gap: 5rem;
+      gap: 2.5rem;
 
       .name {
          flex-basis: 25%;
          flex-shrink: 0;
-         letter-spacing: 0.5rem;
+         letter-spacing: 0.25rem;
+         font-weight: 800;
       }
 
       .content {
@@ -339,7 +353,7 @@ section {
 
          input,
          textarea {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
          }
       }
 
@@ -365,6 +379,14 @@ section {
       font-family: "Sen", sans-serif;
       font-weight: 700;
       font-size: 1.25rem;
+      background: $loader-blue;
+      border-radius: 3px;
+      border-color: $left-gradient;
+      color: $white;
+
+      &:hover {
+         filter: opacity(0.9);
+      }
    }
 
    label {
@@ -469,15 +491,15 @@ section {
       animation: loader-ripple 2s cubic-bezier(0, 0.2, 0.8, 0.5) infinite;
 
       &:nth-child(2) {
-         animation-delay: -0.5s;
+         animation-delay: -0.75s;
       }
 
       &:nth-child(3) {
-         animation-delay: -1s;
+         animation-delay: -1.5s;
       }
 
       &:nth-child(4) {
-         animation-delay: -1.5s;
+         animation-delay: -2s;
       }
    }
 }
@@ -521,10 +543,12 @@ section {
    justify-content: center;
    align-items: center;
    width: 100%;
-   height: 2rem;
-   margin-bottom: 15px;
+   height: 2.5rem;
+   margin: 1rem 0;
+   border-radius: 3px;
    background-color: $alert-red;
    color: $white;
+   font-weight: 800;
 }
 
 .success-message {
@@ -532,8 +556,10 @@ section {
    justify-content: center;
    align-items: center;
    width: 100%;
-   height: 2rem;
-   margin-bottom: 10px;
+   height: 2.5rem;
+   margin: 1rem 0;
+   border-radius: 3px;
    background-color: $alert-green;
    color: $white;
+   font-weight: 800;
 }

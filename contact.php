@@ -1,7 +1,9 @@
 <?php
    session_start();
 
+   require 'lib/header.php';
    require "lib/form-contact.php";
+   require 'lib/footer.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,21 +21,7 @@
 </head>
 
 <body>
-   <header>
-      <nav class="navigation">   
-         <div class="header-name">
-            <a href="index.php">
-               nicholas lamothe
-            </a>
-         </div>
-         <div class="nav-list">
-            <ul>
-               <li><a href="about.php">about</a></li>
-               <li><a href="contact.php" style="color:#FFF;">contact</a></li>
-            </ul>
-         </div>
-      </nav>
-   </header>
+   <?php new Header( 'Contact' ); ?>
 
    <section class="smartphone-contact-section">
       <div class="form-container">
@@ -41,21 +29,21 @@
             <p class="opener"><b>Got a question, consideration, or curiosity? Feel free to reach out.</b></p><br>
 
             <div class="form-inner email-container">
-               <label class="name"><u>e-mail</u></label>
+               <label class="name">e-mail</label>
                <div class="content">
                   <input type="text" name="email">
                </div>
             </div>
 
             <div class="form-inner subject-container">
-               <label class="name"><u>subject</u></label>
+               <label class="name">subject</label>
                <div class="content">
                   <input type="text" name="subject">
                </div>
             </div>
 
             <div class="form-inner message-container">
-               <label class="name"><u>message</u></label>
+               <label class="name">message</label>
                <div class="content">
                   <textarea name="message"></textarea>
                </div>
@@ -63,7 +51,7 @@
 
 
             <div class="form-inner question-container">
-               <label class="name"><u>question</u></label>
+               <label class="name">question</label>
                <div class="content">
                   <input type="hidden" name="random-question" value="<?php echo $randomQuestion; ?>">
 
@@ -105,20 +93,7 @@
       </div>
    </section>
 
-   <footer>
-      <div class="footer-container">
-         <a href="https://www.linkedin.com/in/nicholas-lamothe/" target="_blank">
-            <img src="img/linkedin_logo.png">
-         </a>
-         <a href="https://github.com/nlamo/" target="_blank">
-            <img src="img/github_logo.png">
-         </a>
-
-         <div class="copyright-overlay">
-            &copy; <span id="current-year"></span> Nicholas LaMothe
-         </div>
-      </div>
-   </footer>
+   <?php new Footer(); ?>
 
    <script src="js/general.js" defer></script>
    <script src="js/time.js" defer></script>

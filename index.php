@@ -1,6 +1,9 @@
 <?php
    session_start();
 
+   require 'lib/header.php';
+   require 'lib/footer.php';
+
    if (isset($_SESSION['inputsHaveContent'])) {
       session_destroy();
    }
@@ -20,21 +23,7 @@
 </head>
 
 <body>
-   <header>
-      <nav class="navigation">
-         <div class="header-name">
-            <a href="index.php">
-               nicholas lamothe
-            </a>
-         </div>
-         <div class="nav-list">
-            <ul>
-               <li><a href="about.php">about</a></li>
-               <li><a href="contact.php">contact</a></li>
-            </ul>
-         </div>
-      </nav>
-   </header>
+   <?php new Header(); ?>
 
    <section class="smartphone-index-section">
       <div class="loader-container">
@@ -55,20 +44,7 @@
       </div>
    </section>
 
-   <footer>
-      <div class="footer-container">
-         <a href="https://www.linkedin.com/in/nicholas-lamothe/" target="_blank">
-            <img src="img/linkedin_logo.png">
-         </a>
-         <a href="https://github.com/nlamo/" target="_blank">
-            <img src="img/github_logo.png">
-         </a>
-
-         <div class="copyright-overlay">
-            &copy; <span id="current-year"></span> Nicholas LaMothe
-         </div>
-      </div>
-   </footer>
+   <?php new Footer(); ?>
 
    <script src="js/general.js" defer></script>
    <script src="js/loader.js" defer></script>

@@ -1,6 +1,9 @@
 <?php
    session_start();
 
+   require 'lib/header.php';
+   require 'lib/footer.php';
+
    if (isset($_SESSION['inputsHaveContent'])) {
       session_destroy();
    }
@@ -20,21 +23,7 @@
 </head>
 
 <body>
-   <header>
-      <nav class="navigation">
-         <div class="header-name">
-            <a href="index.php">
-               nicholas lamothe
-            </a>
-         </div>
-         <div class="nav-list">
-            <ul>
-               <li><a href="about.php" style="color:#FFF;">about</a></li>
-               <li><a href="contact.php">contact</a></li>
-            </ul>
-         </div>
-      </nav>
-   </header>
+   <?php new Header( 'About' ); ?>
 
    <section class="smartphone-about-section">
       <div class="about-container">
@@ -51,12 +40,12 @@
 
                   During university, my focus was philosophy and literature, with a special interest in philosophy of mind, ethics, and modernism. Years later, by way of literary insight, I began programming.<br></br>
 
-                  I work in the WordPress environment, with a healthy balance of front-end (CSS/Sass/JS/jQuery/React) and back-end (PHP/MySQL).<br><br>
+                  My experience has been primarily with the LAMP stack, with a healthy balance of front-end (CSS/Sass/JS/jQuery/React) and back-end (PHP/MySQL).<br><br>
                   
-                  Recreationally, I enjoy film, literature, illustration, music, gaming, cycling, and squash.<br><br>
+                  Recreationally, I enjoy film, literature, illustration, music, gaming, and cycling.<br><br>
 
-                  <span id="highlight-selection-container">
-                     You can find my resume <a href="cv/nicholas-lamothe-cv.pdf">here</a>.
+                  <spvan id="highlight-selection-container">
+                     You can find my resume <a href="resume/nicholas-lamothe-resume.pdf">here</a>.
                      <img id="highlight-selection" src="./img/highlight-selection.png" alt="">
                   </span>
                </p>
@@ -64,20 +53,7 @@
          </div>
    </section>
 
-   <footer>
-      <div class="footer-container">
-         <a href="https://www.linkedin.com/in/nicholas-lamothe/" target="_blank">
-            <img src="img/linkedin_logo.png">
-         </a>
-         <a href="https://github.com/nlamo/" target="_blank">
-            <img src="img/github_logo.png">
-         </a>
-
-         <div class="copyright-overlay">
-            &copy; <span id="current-year"></span> Nicholas LaMothe
-         </div>
-      </div>
-   </footer>
+   <?php new Footer(); ?>
 
    <script src="js/general.js" defer></script>
    <script src="js/time.js" defer></script>

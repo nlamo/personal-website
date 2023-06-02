@@ -29,7 +29,8 @@ body {
 .navigation .header-name {
   display: flex;
   flex-direction: row;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.25rem;
+  font-weight: 900;
 }
 .navigation .header-name:active, .navigation .header-name:focus {
   color: #f3f3f3;
@@ -59,6 +60,15 @@ body {
 }
 .nav-list li a:hover {
   color: rgba(255, 255, 255, 0.637);
+}
+.nav-list .current-item {
+  color: #fff;
+}
+.nav-list .current-item:hover {
+  color: #fff;
+}
+.nav-list .item {
+  color: #324b4d;
 }
 
 /*****************/
@@ -277,19 +287,20 @@ section {
 .form-container .form-inner {
   display: flex;
   flex-direction: row;
-  gap: 5rem;
+  gap: 2.5rem;
 }
 .form-container .form-inner .name {
   flex-basis: 25%;
   flex-shrink: 0;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.25rem;
+  font-weight: 800;
 }
 .form-container .form-inner .content {
   flex: 1 1 100%;
 }
 .form-container .form-inner .content input,
 .form-container .form-inner .content textarea {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .form-container .form-inner .question {
   display: block;
@@ -309,6 +320,13 @@ section {
   font-family: "Sen", sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
+  background: #64859b;
+  border-radius: 3px;
+  border-color: #789aa8;
+  color: #fff;
+}
+.form-container .button-submit:hover {
+  filter: opacity(0.9);
 }
 .form-container label {
   margin-bottom: 1rem;
@@ -399,13 +417,13 @@ section {
   animation: loader-ripple 2s cubic-bezier(0, 0.2, 0.8, 0.5) infinite;
 }
 .loader div:nth-child(2) {
-  animation-delay: -0.5s;
+  animation-delay: -0.75s;
 }
 .loader div:nth-child(3) {
-  animation-delay: -1s;
+  animation-delay: -1.5s;
 }
 .loader div:nth-child(4) {
-  animation-delay: -1.5s;
+  animation-delay: -2s;
 }
 
 @keyframes loader-ripple {
@@ -443,10 +461,12 @@ section {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 2rem;
-  margin-bottom: 15px;
+  height: 2.5rem;
+  margin: 1rem 0;
+  border-radius: 3px;
   background-color: #922704;
   color: #fff;
+  font-weight: 800;
 }
 
 .success-message {
@@ -454,10 +474,12 @@ section {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 2rem;
-  margin-bottom: 10px;
+  height: 2.5rem;
+  margin: 1rem 0;
+  border-radius: 3px;
   background-color: #5bbc9e;
   color: #fff;
+  font-weight: 800;
 }
 
 /**************************************/
