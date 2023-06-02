@@ -11,14 +11,8 @@ class Header {
 
 		$page_name = strtolower( $page_name );
 
-		if ( $page_name === 'default' ) {
-			$about = 'item';
-			$contact = 'item';
-		}
-		else {
-			$about = $page_name === 'about' ? 'current-item' : 'item';
-			$contact = $page_name === 'contact' ? 'current-item' : 'item';
-		}
+		$about = $page_name === 'about' ? 'current-item' : 'item';
+		$contact = $page_name === 'contact' ? 'current-item' : 'item';
 
 		printf(
 			<<<'HTML'
