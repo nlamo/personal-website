@@ -19,19 +19,19 @@ class Header {
 				<header>
 					<nav class="navigation">
 						<div class="header-name">
-							<a href="index.php">
+							<a href="/">
 								nicholas lamothe
 							</a>
 						</div>
 						<div class="nav-list">
 							<ul>
 								<li>
-									<a href="about.php" class="%1$s">
+									<a href="about" class="%1$s">
 										about
 									</a>
 								</li>
 								<li>
-									<a href="contact.php" class="%2$s">
+									<a href="contact" class="%2$s">
 										contact
 									</a>
 								</li>

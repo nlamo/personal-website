@@ -47,7 +47,7 @@
       // If any fields are empty, redirect and display appropriate message; else, more validation (e-mail validity, math question) for e-mail send
       if (empty($email) || empty($subject) || empty($message) || empty($answer)) {
          $_SESSION['inputsHaveContent'] = $inputsHaveContent;
-         header("Location: contact.php");
+         header("Location: contact");
       } 
       else {
          $inputsHaveContent = true;
@@ -57,13 +57,13 @@
 
          if (filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
             $_SESSION['emailIsValid'] = $emailIsValid;
-            header("Location: contact.php");
+            header("Location: contact");
          } 
          else if ($answer != $correctAnswer) {
             $emailIsValid = true;
             $_SESSION['emailIsValid'] = $emailIsValid;
             $_SESSION['answerIsValid'] = $answerIsValid;
-            header("Location: contact.php");
+            header("Location: contact");
          } 
          else {
             $emailIsValid = true;
@@ -77,7 +77,7 @@
 
             mail($to, $subject, $body);
 
-            header("Location: contact.php");
+            header("Location: contact");
          }
       }
    }
