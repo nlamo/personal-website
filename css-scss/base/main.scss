@@ -424,28 +424,50 @@ section {
 /**********/
 
 .footer-container {
-   flex: 1 0 auto;
-   height: 12vh;
-   width: 100vw;
-   display: flex;
    position: relative;
+   display: flex;
+   flex: 1 0 auto;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
-   overflow: auto;
+
+   height: 12vh;
+   width: 100vw;
+
    background: -webkit-linear-gradient(to left,
          $right-gradient,
          $left-gradient );
    background: linear-gradient(to left, $right-gradient, $left-gradient);
    border-top: 1px solid $grey-dark;
 
-   a {
+   .link-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 10px 0px 10px 0px;
+      gap: 2rem;
+   }
+
+   .link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+   }
+
+   .copyright-overlay {
+      color: $darker-blue-tertiary;
+      font-size: 0.7rem;
+      margin-top: 1rem;
+   }
+
+   a {
+      height: 100%;
+      width: 100%;
 
       img {
-         width: 40%;
+         height: 100%;
+         width: 100%;
 
          &[src="img/linkedin_logo.png"] {
             background: rgba($white, 0.7);
@@ -460,24 +482,18 @@ section {
 
          &[src="img/github_logo.png"] {
             background: rgba($white, 0.7);
-            border-radius: 1rem;
+            border-radius: 10rem;
 
             &:hover {
                background: $white;
                filter: brightness(120%);
-               border-radius: 1rem;
+               border-radius: 10rem;
             }
          }
       }
    }
 }
 
-.copyright-overlay {
-   color: $darker-blue-tertiary;
-   position: absolute;
-   font-size: 0.7rem;
-   right: 35px;
-}
 
 /***************/
 /** UTILITIES **/

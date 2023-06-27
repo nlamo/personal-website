@@ -355,26 +355,43 @@ section {
 /* FOOTER */
 /**********/
 .footer-container {
-  flex: 1 0 auto;
-  height: 12vh;
-  width: 100vw;
-  display: flex;
   position: relative;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: auto;
+  height: 12vh;
+  width: 100vw;
   background: -webkit-linear-gradient(to left, #fff, #789aa8);
   background: linear-gradient(to left, #fff, #789aa8);
   border-top: 1px solid #303030;
 }
-.footer-container a {
+.footer-container .link-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0px 10px 0px;
+  gap: 2rem;
+}
+.footer-container .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+}
+.footer-container .copyright-overlay {
+  color: #324b4d;
+  font-size: 0.7rem;
+  margin-top: 1rem;
+}
+.footer-container a {
+  height: 100%;
+  width: 100%;
 }
 .footer-container a img {
-  width: 40%;
+  height: 100%;
+  width: 100%;
 }
 .footer-container a img[src="img/linkedin_logo.png"] {
   background: rgba(255, 255, 255, 0.7);
@@ -387,19 +404,12 @@ section {
 }
 .footer-container a img[src="img/github_logo.png"] {
   background: rgba(255, 255, 255, 0.7);
-  border-radius: 1rem;
+  border-radius: 10rem;
 }
 .footer-container a img[src="img/github_logo.png"]:hover {
   background: #fff;
   filter: brightness(120%);
-  border-radius: 1rem;
-}
-
-.copyright-overlay {
-  color: #324b4d;
-  position: absolute;
-  font-size: 0.7rem;
-  right: 35px;
+  border-radius: 10rem;
 }
 
 /***************/
@@ -537,6 +547,13 @@ section {
     bottom: -90px;
   }
 }
+@media screen and (min-width: 800px) {
+  .copyright-overlay {
+    position: absolute;
+    margin-top: 0 !important;
+    right: 30px;
+  }
+}
 /*********************************************************/
 /* Very small screens, but still larger than smartphones */
 /*********************************************************/
@@ -588,8 +605,15 @@ section {
   .form-container .opener {
     margin: 0 0 3rem 0;
   }
-  .copyright-overlay {
-    font-size: 0.5rem;
+  .footer-container {
+    height: 18vh;
+  }
+  .footer-container .link-container .link {
+    width: 30px;
+    height: 30px;
+  }
+  .footer-container .copyright-overlay {
+    margin-top: 1.5rem;
   }
 }
 /**************************/
@@ -681,16 +705,15 @@ section {
     margin: 4rem 0 2rem 0;
   }
   .footer-container {
+    height: 18vh;
     flex-shrink: 1;
-    margin-bottom: 50px;
   }
-  .footer-container a img {
-    width: 25%;
-    height: 40%;
+  .footer-container .link-container .link {
+    width: 30px;
+    height: 30px;
   }
-  .copyright-overlay {
-    font-size: 0.5rem;
-    right: 20px;
+  .footer-container .copyright-overlay {
+    margin-top: 1.5rem;
   }
   .loader-container {
     width: 180px;

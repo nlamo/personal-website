@@ -57,6 +57,14 @@
    }
 }
 
+@media screen and (min-width: 800px) {
+   .copyright-overlay {
+      position: absolute;
+      margin-top: 0 !important;
+      right: 30px;
+   }
+}
+
 /*********************************************************/
 /* Very small screens, but still larger than smartphones */
 /*********************************************************/
@@ -120,8 +128,19 @@
       }
    }
 
-   .copyright-overlay {
-      font-size: 0.5rem;
+   .footer-container {
+      height: 18vh;
+
+      .link-container {
+         .link {
+            width: 30px;
+            height: 30px;
+         }
+      }
+
+      .copyright-overlay {
+         margin-top: 1.5rem;
+      }
    }
 }
 
@@ -237,18 +256,19 @@
    }
 
    .footer-container {
+      height: 18vh;
       flex-shrink: 1;
-      margin-bottom: 50px;
 
-      a img {
-         width: 25%;
-         height: 40%;
+      .link-container {
+         .link {
+            width: 30px;
+            height: 30px;
+         }
       }
-   }
 
-   .copyright-overlay {
-      font-size: 0.5rem;
-      right: 20px;
+      .copyright-overlay {
+         margin-top: 1.5rem;
+      }
    }
 
    .loader-container {
