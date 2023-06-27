@@ -6,10 +6,11 @@
  * @param string $page_name The name of the page.
  * @return void
  */
-class Header {
-	function __construct( $page_name = 'Default' ) {
-
-		$page_name = strtolower( $page_name );
+class Header
+{
+	function __construct($page_name = 'Default')
+	{
+		$page_name = strtolower($page_name);
 
 		$about = $page_name === 'about' ? 'current-item' : 'item';
 		$contact = $page_name === 'contact' ? 'current-item' : 'item';
@@ -39,9 +40,9 @@ class Header {
 						</div>
 					</nav>
 				</header>
-			HTML
-			, $about
-			, $contact
+			HTML,
+			htmlspecialchars($about),
+			htmlspecialchars($contact)
 		);
 	}
 }

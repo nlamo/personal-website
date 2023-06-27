@@ -1,11 +1,11 @@
-$right-gradient: #9bb4cc;
+$right-gradient: #fff;
 $left-gradient: #789aa8;
 
 $darker-blue-primary: #005c73;
 $darker-blue-secondary: #325c73;
 $darker-blue-tertiary: #324b4d;
 
-$hover: #f3f3f3;
+$hover: #324b4d;
 
 $alert-red: #922704;
 $alert-green: #5bbc9e;
@@ -14,6 +14,7 @@ $loader-blue: #64859b;
 
 $white: #fff;
 $black: #000;
+$grey-dark: #303030;
 $orange: #ffac1c;
 $coral: #ff7f50;
 
@@ -35,12 +36,16 @@ body {
          $right-gradient,
          $left-gradient );
    background: linear-gradient(to left, $right-gradient, $left-gradient);
-   font-family: "Sen", sans-serif;
+   font-family: 'Pathway Extreme', sans-serif;
 }
 
-/******************/
-/* NAVIGATION BAR */
-/******************/
+/*********************/
+/* HEADER/NAVIGATION */
+/*********************/
+
+header {
+   border-bottom: 1px solid $grey-dark;
+}
 
 .navigation {
    display: flex;
@@ -52,16 +57,16 @@ body {
       display: flex;
       flex-direction: row;
       letter-spacing: 0.25rem;
-      font-weight: 900;
+      font-weight: 700;
       
       &:active,
       &:focus {
-         color: $hover;
+         color: $white;
       }
 
       &.hovered {
          a {
-            color: $hover;
+            color: $white;
          }
       }
 
@@ -90,21 +95,21 @@ body {
          color: $darker-blue-tertiary;
 
          &:hover {
-            color: rgba($white, 0.637);
+            color: rgba($hover, 0.637);
          }
       }
    }
 
    .current-item {
-      color: $white;
+      color: $hover;
 
       &:hover {
-         color: $white;
+         color: $hover;
       }
    }
 
    .item {
-      color: #324b4d;
+      color: #789aa8;
    }
 }
 
@@ -212,7 +217,6 @@ section {
    display: flex;
    justify-content: center;
    align-items: center;
-   font-family: "Comfortaa", cursive;
 }
 
 .portfolio-grid {
@@ -243,7 +247,7 @@ section {
    justify-content: center;
    align-items: center;
    overflow: hidden;
-   font-family: "Comfortaa", cursive;
+   font-family: 'Pathway Extreme', sans-serif;
 }
 
 .about-grid {
@@ -351,7 +355,7 @@ section {
          flex-basis: 25%;
          flex-shrink: 0;
          letter-spacing: 0.25rem;
-         font-weight: 800;
+         font-weight: 700;
       }
 
       .content {
@@ -382,7 +386,7 @@ section {
       height: 3rem;
       align-self: center;
       margin: 1rem 0;
-      font-family: "Sen", sans-serif;
+      font-family: 'Pathway Extreme', sans-serif;
       font-weight: 700;
       font-size: 1.25rem;
       background: $loader-blue;
@@ -403,7 +407,7 @@ section {
       width: 100%;
       padding: 0.3rem;
       margin-bottom: 1rem;
-      font-family: "Montserrat", sans-serif;
+      font-family: 'Pathway Extreme', sans-serif;
    }
 
    textarea {
@@ -411,7 +415,7 @@ section {
       height: 140px;
       padding: 0.3rem;
       margin-bottom: 1rem;
-      font-family: "Montserrat", sans-serif;
+      font-family: 'Pathway Extreme', sans-serif;
    }
 }
 
@@ -432,6 +436,7 @@ section {
          $right-gradient,
          $left-gradient );
    background: linear-gradient(to left, $right-gradient, $left-gradient);
+   border-top: 1px solid $grey-dark;
 
    a {
       display: flex;
@@ -554,7 +559,7 @@ section {
    border-radius: 3px;
    background-color: $alert-red;
    color: $white;
-   font-weight: 800;
+   font-weight: 700;
 }
 
 .success-message {
@@ -567,5 +572,5 @@ section {
    border-radius: 3px;
    background-color: $alert-green;
    color: $white;
-   font-weight: 800;
+   font-weight: 700;
 }

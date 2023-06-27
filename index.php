@@ -1,6 +1,7 @@
 <?php
    session_start();
 
+   require 'lib/head.php';
    require 'lib/header.php';
    require 'lib/footer.php';
 
@@ -12,15 +13,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="height=device-height, initial-scale=1, maximum-scale=1" />
-   <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="css/styles.css">
-   <title>Nicholas LaMothe - Portfolio Website</title>
-</head>
+<?php new Head(); ?>
 
 <body>
    <?php new Header(); ?>

@@ -1,6 +1,7 @@
 <?php
    session_start();
 
+   require 'lib/head.php';
    require 'lib/header.php';
    require "lib/form-contact.php";
    require 'lib/footer.php';
@@ -9,16 +10,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://fonts.googleapis.com/css2?family=Sen&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="css/styles.css">
-   <title>Nicholas LaMothe - Portfolio Website</title>
-</head>
+<?php new Head(); ?>
 
 <body>
    <?php new Header( 'Contact' ); ?>

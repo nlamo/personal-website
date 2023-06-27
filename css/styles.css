@@ -12,14 +12,18 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: -webkit-linear-gradient(to left, #9bb4cc, #789aa8);
-  background: linear-gradient(to left, #9bb4cc, #789aa8);
-  font-family: "Sen", sans-serif;
+  background: -webkit-linear-gradient(to left, #fff, #789aa8);
+  background: linear-gradient(to left, #fff, #789aa8);
+  font-family: "Pathway Extreme", sans-serif;
 }
 
-/******************/
-/* NAVIGATION BAR */
-/******************/
+/*********************/
+/* HEADER/NAVIGATION */
+/*********************/
+header {
+  border-bottom: 1px solid #303030;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -30,13 +34,13 @@ body {
   display: flex;
   flex-direction: row;
   letter-spacing: 0.25rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 .navigation .header-name:active, .navigation .header-name:focus {
-  color: #f3f3f3;
+  color: #fff;
 }
 .navigation .header-name.hovered a {
-  color: #f3f3f3;
+  color: #fff;
 }
 .navigation .header-name a {
   color: #324b4d;
@@ -59,16 +63,16 @@ body {
   color: #324b4d;
 }
 .nav-list li a:hover {
-  color: rgba(255, 255, 255, 0.637);
+  color: rgba(50, 75, 77, 0.637);
 }
 .nav-list .current-item {
-  color: #fff;
+  color: #324b4d;
 }
 .nav-list .current-item:hover {
-  color: #fff;
+  color: #324b4d;
 }
 .nav-list .item {
-  color: #324b4d;
+  color: #789aa8;
 }
 
 /*****************/
@@ -164,7 +168,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Comfortaa", cursive;
 }
 
 .portfolio-grid {
@@ -194,7 +197,7 @@ section {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  font-family: "Comfortaa", cursive;
+  font-family: "Pathway Extreme", sans-serif;
 }
 
 .about-grid {
@@ -296,7 +299,7 @@ section {
   flex-basis: 25%;
   flex-shrink: 0;
   letter-spacing: 0.25rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 .form-container .form-inner .content {
   flex: 1 1 100%;
@@ -320,7 +323,7 @@ section {
   height: 3rem;
   align-self: center;
   margin: 1rem 0;
-  font-family: "Sen", sans-serif;
+  font-family: "Pathway Extreme", sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
   background: #64859b;
@@ -338,14 +341,14 @@ section {
   width: 100%;
   padding: 0.3rem;
   margin-bottom: 1rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Pathway Extreme", sans-serif;
 }
 .form-container textarea {
   width: 100%;
   height: 140px;
   padding: 0.3rem;
   margin-bottom: 1rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Pathway Extreme", sans-serif;
 }
 
 /**********/
@@ -360,8 +363,9 @@ section {
   justify-content: center;
   align-items: center;
   overflow: auto;
-  background: -webkit-linear-gradient(to left, #9bb4cc, #789aa8);
-  background: linear-gradient(to left, #9bb4cc, #789aa8);
+  background: -webkit-linear-gradient(to left, #fff, #789aa8);
+  background: linear-gradient(to left, #fff, #789aa8);
+  border-top: 1px solid #303030;
 }
 .footer-container a {
   display: flex;
@@ -469,7 +473,7 @@ section {
   border-radius: 3px;
   background-color: #922704;
   color: #fff;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .success-message {
@@ -482,7 +486,7 @@ section {
   border-radius: 3px;
   background-color: #5bbc9e;
   color: #fff;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 /**************************************/

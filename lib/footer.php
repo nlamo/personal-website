@@ -3,8 +3,10 @@
 /**
  * Output the footer.
  */
-class Footer {
-	function __construct() {
+class Footer
+{
+	function __construct()
+	{
 		printf(
 			<<<HTML
 			   <footer>
