@@ -129,7 +129,7 @@
    }
 
    .footer-container {
-      height: 18vh;
+      min-height: 18vh;
 
       .link-container {
          .link {
@@ -139,7 +139,22 @@
       }
 
       .copyright-overlay {
-         margin-top: 1.5rem;
+         margin-top: 0.5rem;
+         margin-bottom: 1.5rem;
+      }
+   }
+
+   .container-404 {
+      flex-direction: column;
+
+      .text {
+         p {
+            margin: 0 0 1rem 0;
+         }
+      }
+
+      .messages {
+         margin-bottom: 2.5rem;
       }
    }
 }
@@ -256,7 +271,7 @@
    }
 
    .footer-container {
-      height: 18vh;
+      min-height: 18vh;
       flex-shrink: 1;
 
       .link-container {
@@ -267,7 +282,8 @@
       }
 
       .copyright-overlay {
-         margin-top: 1.5rem;
+         margin-top: 0.5rem;
+         margin-bottom: 1.5rem;
       }
    }
 
@@ -282,5 +298,49 @@
 
    .success-message {
       font-size: 0.8rem;
+   }
+
+   .container-404 {
+
+      flex-direction: column;
+      .text {
+         p {
+ 
+            font-size: 7.5rem;
+            margin: 0 0 1rem 0;
+         }
+      }
+
+      .messages {
+         margin-bottom: 2.5rem;
+
+         .message {
+            font-size: 1rem;
+         }
+      }
+   }
+}
+
+
+/********/
+/* Home */
+/********/
+
+@media screen and (min-width: 0px) and (max-width: 799px) {
+   .home {
+      display: flex;
+      flex-direction: column;
+   
+      header {
+         flex-basis: 20%;
+      }
+   
+      section {
+         flex-basis: 50%;
+      }
+   
+      footer {
+         flex-basis: 20%;
+      }
    }
 }

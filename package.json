@@ -1,0 +1,24 @@
+{
+  "name": "nicholas-lamothe-personal-website",
+  "version": "1.0.0",
+  "description": "My website.",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "watch": "sass css-scss/styles.scss css/styles.css --watch",
+    "build": "sass css-scss/styles.scss css/styles.css --watch"
+  },
+  "author": "Nicholas LaMothe",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nlamo/personal-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nlamo/personal-website/issues"
+  },
+  "homepage": "https://github.com/nlamo/personal-website#readme",
+  "dependencies": {
+    "sass": "^1.69.7"
+  }
+}

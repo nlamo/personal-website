@@ -40,7 +40,7 @@ body {
 }
 
 /*********************/
-/* HEADER/NAVIGATION */
+/* Header/Navigation */
 /*********************/
 
 header {
@@ -114,7 +114,7 @@ header {
 }
 
 /*****************/
-/* MAIN SECTIONS */
+/* Main Sections */
 /*****************/
 
 section {
@@ -210,7 +210,7 @@ section {
 }
 
 /**********************************/
-/* Portfolio/project grid section */
+/* Portfolio/Project Grid Section */
 /**********************************/
 
 .portfolio-container {
@@ -325,7 +325,7 @@ section {
 }
 
 /************************/
-/* Contact form section */
+/* Contact Form Section */
 /************************/
 
 .form-container {
@@ -379,7 +379,6 @@ section {
       }
    }
 
-
    .button-submit {
       cursor: pointer;
       width: 100%;
@@ -419,8 +418,43 @@ section {
    }
 }
 
+/*******/
+/* 404 */
+/*******/
+
+.container-404 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5rem;
+
+    .text {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 10rem;
+      color: $alert-green;
+
+      p {
+         margin: 2.5rem 0;
+      }
+    }
+
+    .messages {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .message {
+            font-size: 1.1rem;
+            max-width: 75%;
+        }
+    }
+}
+
+
 /**********/
-/* FOOTER */
+/* Footer */
 /**********/
 
 .footer-container {
@@ -431,7 +465,7 @@ section {
    justify-content: center;
    align-items: center;
 
-   height: 12vh;
+   min-height: 12vh;
    width: 100vw;
 
    background: -webkit-linear-gradient(to left,
@@ -445,6 +479,7 @@ section {
       justify-content: center;
       align-items: center;
       gap: 2rem;
+      padding: 1rem 0;
    }
 
    .link {
@@ -496,7 +531,7 @@ section {
 
 
 /***************/
-/** UTILITIES **/
+/** Utilities **/
 /***************/
 
 .loader-container {

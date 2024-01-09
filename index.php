@@ -15,7 +15,7 @@
 
 <?php new Head(); ?>
 
-<body>
+<body class="home">
    <?php new Header(); ?>
 
    <section class="smartphone-index-section">

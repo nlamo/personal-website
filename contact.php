@@ -41,7 +41,6 @@
                </div>
             </div>
 
-
             <div class="form-inner question-container">
                <label class="name">question</label>
                <div class="content">
@@ -53,8 +52,6 @@
                      </span>
                      <input type="text" name="answer"><br>
                   </label>
-
-    
                </div>
             </div>
 
